@@ -1,1 +1,1 @@
-https://kosvoloshin.github.io/fences/build/index.html
+link to: https://kosvoloshin.github.io/fences/build/index.html
