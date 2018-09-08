@@ -8,9 +8,9 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <link rel="stylesheet" href="./assets/styles/app.min.css">
-    <!--link(rel="icon" type="image/x-icon" href="./assets/images/favicon.ico")-->
     <script src="./assets/scripts/bundle.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -21,7 +21,7 @@
             <div class="header__menu">
               <ul class="menu">
                 <li class="menu__item"><a class="menu__link" href="index.html">главная </a></li>
-                <li class="menu__item"><a class="menu__link menu__link--dropdown" href="#">услуги</a>
+                <li class="menu__item"><a class="menu__link" href="#">услуги</a>
                   <ul class="dropdown">
                     <li class="dropdown__item"><a class="dropdown__link" href="calculator.html">Заборы из профнастила</a></li>
                     <li class="dropdown__item"><a class="dropdown__link" href="#">Заборы из сетки рабицы</a></li>
@@ -45,8 +45,10 @@
                     <use xlink:href="assets/images/icons/sprite.svg#phone"></use>
                   </svg>
                 </div>
-                <div class="header__number">8 (926) 289-42-23</div>
-                <div class="header__text">перезвонить мне</div></a></div>
+                <div class="header__phone">
+                  <div class="header__number">8 (926) 289-42-23</div>
+                  <div class="header__text">перезвонить мне</div>
+                </div></a></div>
           </div>
         </div>
       </header>

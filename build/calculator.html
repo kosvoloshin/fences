@@ -8,9 +8,9 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <link rel="stylesheet" href="./assets/styles/app.min.css">
-    <!--link(rel="icon" type="image/x-icon" href="./assets/images/favicon.ico")-->
     <script src="./assets/scripts/bundle.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -21,7 +21,7 @@
             <div class="header__menu">
               <ul class="menu">
                 <li class="menu__item"><a class="menu__link" href="index.html">главная </a></li>
-                <li class="menu__item"><a class="menu__link menu__link--dropdown" href="#">услуги</a>
+                <li class="menu__item"><a class="menu__link" href="#">услуги</a>
                   <ul class="dropdown">
                     <li class="dropdown__item"><a class="dropdown__link" href="calculator.html">Заборы из профнастила</a></li>
                     <li class="dropdown__item"><a class="dropdown__link" href="#">Заборы из сетки рабицы</a></li>
@@ -45,8 +45,10 @@
                     <use xlink:href="assets/images/icons/sprite.svg#phone"></use>
                   </svg>
                 </div>
-                <div class="header__number">8 (926) 289-42-23</div>
-                <div class="header__text">перезвонить мне</div></a></div>
+                <div class="header__phone">
+                  <div class="header__number">8 (926) 289-42-23</div>
+                  <div class="header__text">перезвонить мне</div>
+                </div></a></div>
           </div>
         </div>
       </header>
@@ -59,8 +61,64 @@
         <div class="hero">
           <div class="container">
             <div class="hero__wrap hero__wrap--fullwidth">
-              <h1 class="section__title section__title--bold">Расчет стоимости забора <br>из <span class="section__title--blue">профнастила</span>
-                <!-- если заменить класс на - '.section__title--red' получишь красный цвет--> длиной <span class="section__title--blue">100м</span>
+              <h1 class="section__title section__title--bold">Расчет стоимости забора <br>из 
+                <div class="section__title--blue">профнастила
+                  <!-- если заменить класс на - '.section__title--red' получишь красный цвет-->
+                  <ul class="type visible">
+                    <!--убрать класс 'visible' и скроется-->
+                    <button class="type__btn" type="button">
+                      <svg class="type__icon">
+                        <use xlink:href="assets/images/icons/sprite.svg#close"></use>
+                      </svg>
+                    </button>
+                    <li class="type__item"><a class="type__link" href="#">Сетка рабица</a></li>
+                    <li class="type__item"><a class="type__link" href="#">Дерево</a></li>
+                    <li class="type__item"><a class="type__link" href="#">Евроштакетник</a></li>
+                    <li class="type__item"><a class="type__link" href="#">3D сетка</a></li>
+                    <li class="type__item"><a class="type__link" href="#">Рабица в рамке</a></li>
+                  </ul>
+                </div> длиной 
+                <div class="section__title--blue">100м
+                  <div class="tooltip visible">
+                    <p>Пожалуйста, введите длину<br>забора, чтобы продолжить расчет </p>
+                  </div>
+                  <form class="lenght visible">
+                    <div class="lenght__row">  
+                      <div class="lenght__text">
+                        <div class="lenght__text-line">Необходимая</div>
+                        <div class="lenght__text-line">длина забора</div>
+                      </div>
+                      <div class="lenght__box">
+                        <input class="lenght__input" type="text" name="length">
+                      </div>
+                      <div class="lenght__box">
+                        <label class="lenght__block">
+                          <input class="lenght__radio visuallyhidden" type="radio" name="options" value="метры">
+                          <div class="lenght__radio-fake"></div>
+                          <div class="lenght__subtitle">Метров</div>
+                        </label>
+                        <label class="lenght__block">
+                          <input class="lenght__radio visuallyhidden" type="radio" name="options" value="сотки">
+                          <div class="lenght__radio-fake"></div>
+                          <div class="lenght__subtitle">Соток</div>
+                        </label>
+                      </div>
+                      <button class="lenght__btn" type="button">
+                        <svg class="lenght__icon">
+                          <use xlink:href="assets/images/icons/sprite.svg#close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="lenght__row">
+                      <button class="lenght__button" type="button">
+                        <div class="lenght__btn-text">подтвердить</div>
+                        <svg class="lenght__btn-icon">
+                          <use xlink:href="assets/images/icons/sprite.svg#right-arrow"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </form>
+                </div>
               </h1>
             </div>
           </div>
@@ -77,6 +135,8 @@
                 <div class="form__tabs">
                   <div class="tabs">
                     <ul class="tabs__list">
+                      <!-- a.tabs__link - класс 'selected' - подсвечивает зеленым-->
+                      <!-- a.tabs__link - класс 'active' - подсвечивает синим-->
                       <li class="tabs__item"><a class="tabs__link selected" href="#">
                           <div class="tabs__obj">Выбор покрытия</div>
                           <svg class="tabs__icon">
@@ -108,529 +168,361 @@
                     </ul>
                   </div>
                 </div>
-                <div class="form__columns">     
-                  <div class="form__col-l">
-                    <div class="form__row">
-                      <label class="form__block form__block--no-flex">
-                        <div class="form__subtitle form__subtitle--no-margin form__subtitle--dark">Типы покрытия (7)</div>
-                        <label class="form__select" for="select">
-                          <input id="bg" type="radio" name="list" value="not_changed" checked="">
-                          <input id="select" type="radio" name="list" value="not_changed">
-                          <label class="bg" for="bg"></label>
-                          <div class="items">
-                            <input type="radio" name="list" value="first_value" id="list[0]">
-                            <label class="green" for="list[0]">Нет</label>
-                            <input type="radio" name="list" value="second_value" id="list[1]">
-                            <label class="green" for="list[1]">1</label>
-                            <input type="radio" name="list" value="third_value" id="list[2]">
-                            <label class="green" for="list[2]">2</label>
-                            <input type="radio" name="list" value="fourth_value" id="list[3]">
-                            <label class="green" for="list[3]">3</label>
+                <ul class="form__list">
+                  <!-- по умолчанию все li.form__item - display: none; | при добавлении класса 'visible'-display: block;-->
+                  <li class="form__item">
+                    <div class="form__columns">     
+                      <div class="form__col-l">
+                        <div class="form__row">
+                          <label class="form__block form__block--no-flex">
+                            <div class="form__subtitle form__subtitle--no-margin form__subtitle--dark">Типы покрытия (7)</div>
+                            <label class="form-calc" for="select">
+                              <input id="bg" type="radio" name="list" value="not_changed" checked="">
+                              <input id="select" type="radio" name="list" value="not_changed">
+                              <label class="bg" for="bg"></label>
+                              <div class="items-calc">
+                                <input type="radio" name="list" value="first_value" id="list[0]">
+                                <label class="green" for="list[0]">Нет</label>
+                                <input type="radio" name="list" value="second_value" id="list[1]">
+                                <label class="green" for="list[1]">1</label>
+                                <input type="radio" name="list" value="third_value" id="list[2]">
+                                <label class="green" for="list[2]">2</label>
+                                <input type="radio" name="list" value="fourth_value" id="list[3]">
+                                <label class="green" for="list[3]">3</label>
+                              </div>
+                            </label>
+                          </label>
+                        </div>
+                        <button class="form__button form__button--dark form__button--calc" type="submit">
+                          <div class="form__btn-text form__btn-text--dark form__btn-text--bold">продолжить расчет</div>
+                          <svg class="form__btn-icon form__btn-icon--dark">
+                            <use xlink:href="assets/images/icons/sprite.svg#right-arrow"></use>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="form__col-r">
+                        <div class="form__image"><img class="form__pic" src="./assets/images/pic/calc-one.jpg" alt="picture"></div>
+                        <div class="form__caption">Вы можете указать интересующий вид профнастила</div>
+                        <div class="form__row">
+                          <label class="form__block">
+                            <input class="form__radio visuallyhidden" type="radio" name="type" value="вид">
+                            <div class="form__radio-fake form__radio-fake--green"></div>
+                            <div class="form__subtitle form__subtitle--margin-left">С-8х1150</div>
+                          </label>
+                          <label class="form__block">
+                            <input class="form__radio visuallyhidden" type="radio" name="type" value="вид">
+                            <div class="form__radio-fake form__radio-fake--green"></div>
+                            <div class="form__subtitle form__subtitle--margin-left">С-21х1000</div>
+                          </label>
+                          <label class="form__block">
+                            <input class="form__radio visuallyhidden" type="radio" name="type" value="вид">
+                            <div class="form__radio-fake form__radio-fake--green"></div>
+                            <div class="form__subtitle form__subtitle--margin-left">МП-20х1100</div>
+                          </label>
+                          <label class="form__block">
+                            <input class="form__radio visuallyhidden" type="radio" name="type" value="вид">
+                            <div class="form__radio-fake form__radio-fake--green"></div>
+                            <div class="form__subtitle form__subtitle--margin-left">МП-35х1035</div>
+                          </label>
+                        </div>
+                        <div class="form__text form__text--dark form__text--90">
+                          <p>Оцинкованный профильный лист с цветным полимерным покрытием с одной стороны и светло-серым грунтовым покрытием, защищенным лаком, с другой стороны. Толщина стального листа от 0,35мм до 0,7мм. Выбор цвета имеет большой ассортимент.</p>
+                        </div>
+                        <div class="form__colors"> 
+                          <p>Цветовая палитра содержит все <a class="form__colors-link" href="#" target="blanc">цвета стандарта RAL </a>- 213 вариантов.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="form__item">
+                    <div class="form__columns">     
+                      <div class="form__col-l form__col-l--resize">
+                        <div class="form__row">
+                          <label class="form__block form__block--no-flex">
+                            <div class="form__subtitle form__subtitle--dark">Высота забора:</div>
+                            <input class="form__input" type="text" name="length" required>
+                          </label>
+                        </div>
+                        <button class="form__button form__button--dark form__button--calc" type="submit">
+                          <div class="form__btn-text form__btn-text--dark form__btn-text--bold">продолжить расчет</div>
+                          <svg class="form__btn-icon form__btn-icon--dark">
+                            <use xlink:href="assets/images/icons/sprite.svg#right-arrow"></use>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="form__col-r form__col-r--resize">
+                        <div class="form__image form__image--resize"><img class="form__pic" src="./assets/images/pic/calc-two.png" alt="picture"><span class="form__obj-one">1.5м</span></div>
+                        <div class="form__text form__text--dark form__text--90 form__text--resize">
+                          <p>Lorem ipsum dolor sit amet consecteturlor sit amet co adipisicing elit. Ducimus deleniti ut nulla aut totam. Nulla maxime repellendus fugit tenetur provident in. Beatae, aliquid. Quo, ea veritatis sint odio labore cum.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="form__item">
+                    <div class="form__columns">     
+                      <div class="form__col-l form__col-l--resize">
+                        <div class="form__row">
+                          <label class="form__block form__block--no-flex">
+                            <div class="form__subtitle form__subtitle--dark">Кол-во горизонталей (лаг)</div>
+                          </label>
+                        </div>
+                        <div class="form__row form__row--flex-start">
+                          <label class="form__block form__block--flex-0">
+                            <input class="form__radio visuallyhidden" type="radio" name="number-of-contours" value="количество">
+                            <div class="form__radio-fake form__radio-fake--square">2</div>
+                          </label>
+                          <label class="form__block form__block--flex-0">
+                            <input class="form__radio visuallyhidden" type="radio" name="number-of-contours" value="количество">
+                            <div class="form__radio-fake form__radio-fake--square">3</div>
+                          </label>
+                        </div>
+                        <button class="form__button form__button--dark form__button--calc" type="submit">
+                          <div class="form__btn-text form__btn-text--dark form__btn-text--bold">продолжить расчет</div>
+                          <svg class="form__btn-icon form__btn-icon--dark">
+                            <use xlink:href="assets/images/icons/sprite.svg#right-arrow"></use>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="form__col-r form__col-r--resize">
+                        <div class="form__image form__image--resize"><img class="form__pic" src="./assets/images/pic/calc-three.png" alt="picture"><span class="form__obj-one">1.5м</span></div>
+                        <div class="form__text form__text--dark form__text--90 form__text--resize">
+                          <p>Lorem ipsum dolor sit amet consecteturlor sit amet co adipisicing elit. Ducimus deleniti ut nulla aut totam. Nulla maxime repellendus fugit tenetur provident in. Beatae, aliquid. Quo, ea veritatis sint odio labore cum.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="form__item">
+                    <div class="form__columns">     
+                      <div class="form__col-l form__col-l--resize">
+                        <div class="form__row form__row--selects">
+                          <label class="form__block form__block--no-flex">
+                            <div class="form__subtitle form__subtitle--no-margin form__subtitle--dark">Количество ворот</div>
+                            <label class="form-calc-number" for="select-number">
+                              <input id="bg-number" type="radio" name="number-of-gates" value="not_changed" checked="">
+                              <input id="select-number" type="radio" name="number-of-gates" value="not_changed">
+                              <label class="bg-number" for="bg-number"></label>
+                              <div class="items-calc-number">
+                                <input type="radio" name="number-of-gates" value="first_value" id="number-of-gates[0]">
+                                <label class="green" for="number-of-gates[0]">1</label>
+                                <input type="radio" name="number-of-gates" value="second_value" id="number-of-gates[1]">
+                                <label class="green" for="number-of-gates[1]">2</label>
+                                <input type="radio" name="number-of-gates" value="third_value" id="number-of-gates[2]">
+                                <label class="green" for="number-of-gates[2]">3</label>
+                                <input type="radio" name="number-of-gates" value="fourth_value" id="number-of-gates[3]">
+                                <label class="green" for="number-of-gates[3]">4</label>
+                              </div>
+                            </label>
+                          </label>
+                        </div>
+                        <div class="form__row form__row--selects">
+                          <label class="form__block form__block--no-flex">
+                            <div class="form__subtitle form__subtitle--no-margin form__subtitle--dark">Ширина ворот</div>
+                            <label class="form-calc-width" for="select-width">
+                              <input id="bg-width" type="radio" name="fence-width" value="not_changed" checked="">
+                              <input id="select-width" type="radio" name="fence-width" value="not_changed">
+                              <label class="bg-width" for="bg-width"></label>
+                              <div class="items-calc-width">
+                                <input type="radio" name="fence-width" value="first_value" id="fence-width[0]">
+                                <label class="green" for="fence-width[0]">2м</label>
+                                <input type="radio" name="fence-width" value="second_value" id="fence-width[1]">
+                                <label class="green" for="fence-width[1]">3м</label>
+                                <input type="radio" name="fence-width" value="third_value" id="fence-width[2]">
+                                <label class="green" for="fence-width[2]">4м</label>
+                                <input type="radio" name="fence-width" value="fourth_value" id="fence-width[3]">
+                                <label class="green" for="fence-width[3]">5м</label>
+                              </div>
+                            </label>
+                          </label>
+                        </div>
+                        <button class="form__button form__button--dark form__button--calc" type="submit">
+                          <div class="form__btn-text form__btn-text--dark form__btn-text--bold">продолжить расчет</div>
+                          <svg class="form__btn-icon form__btn-icon--dark">
+                            <use xlink:href="assets/images/icons/sprite.svg#right-arrow"></use>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="form__col-r form__col-r--resize">
+                        <div class="form__image form__image--resize-2"><img class="form__pic" src="./assets/images/pic/calc-four.png" alt="picture"><span class="form__obj-one">1.5м</span><span class="form__obj-two">2</span><span class="form__obj-three">3м</span></div>
+                        <div class="form__text form__text--dark form__text--90 form__text--resize">
+                          <p>Lorem ipsum dolor sit amet consecteturlor sit amet co adipisicing elit. Ducimus deleniti ut nulla aut totam. Nulla maxime repellendus fugit tenetur provident in. Beatae, aliquid. Quo, ea veritatis sint odio labore cum.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="form__item">
+                    <div class="form__columns">     
+                      <div class="form__col-l form__col-l--resize">
+                        <div class="form__row form__row--selects">
+                          <label class="form__block form__block--no-flex">
+                            <div class="form__subtitle form__subtitle--no-margin form__subtitle--dark">Количество калиток</div>
+                            <label class="form-calc-door" for="select-door">
+                              <input id="bg-door" type="radio" name="number-of-door" value="not_changed" checked="">
+                              <input id="select-door" type="radio" name="number-of-door" value="not_changed">
+                              <label class="bg-door" for="bg-door"></label>
+                              <div class="items-calc-door">
+                                <input type="radio" name="number-of-door" value="first_value" id="number-of-door[0]">
+                                <label class="green" for="number-of-door[0]">1</label>
+                                <input type="radio" name="number-of-door" value="second_value" id="number-of-door[1]">
+                                <label class="green" for="number-of-door[1]">2</label>
+                                <input type="radio" name="number-of-door" value="third_value" id="number-of-door[2]">
+                                <label class="green" for="number-of-door[2]">3</label>
+                                <input type="radio" name="number-of-door" value="fourth_value" id="number-of-door[3]">
+                                <label class="green" for="number-of-door[3]">4</label>
+                              </div>
+                            </label>
+                          </label>
+                        </div>
+                        <button class="form__button form__button--dark form__button--calc" type="submit">
+                          <div class="form__btn-text form__btn-text--dark form__btn-text--bold">продолжить расчет</div>
+                          <svg class="form__btn-icon form__btn-icon--dark">
+                            <use xlink:href="assets/images/icons/sprite.svg#right-arrow"></use>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="form__col-r form__col-r--resize">
+                        <div class="form__image form__image--resize-2"><img class="form__pic" src="./assets/images/pic/calc-five.png" alt="picture"><span class="form__obj-one">1.5м</span><span class="form__obj-two">2</span><span class="form__obj-three">3м</span><span class="form__obj-four">2</span></div>
+                        <div class="form__text form__text--dark form__text--90 form__text--resize">
+                          <p>Lorem ipsum dolor sit amet consecteturlor sit amet co adipisicing elit. Ducimus deleniti ut nulla aut totam. Nulla maxime repellendus fugit tenetur provident in. Beatae, aliquid. Quo, ea veritatis sint odio labore cum.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="form__item visible">
+                    <div class="form__result">
+                      <div class="form-table">
+                        <h2 class="form-table__title">Детальный расчет</h2>
+                        <ul class="form-table__list">
+                          <li class="form-table__item form-table__item--title">
+                            <div class="form-table__left"><span class="form-table__text form-table__text--title">Материалы</span></div>
+                            <div class="form-table__right"><span class="form-table__text form-table__text--title">Цена</span></div>
+                          </li>
+                          <li class="form-table__item">
+                            <div class="form-table__left"><span class="form-table__text">Столб проф. труба 60х60 мм h=2700 мм</span><span class="form-table__info" data-tooltip="Подробности уточняйте у менеджера по телефону">i</span></div>
+                            <div class="form-table__right"><span class="form-table__text">37 шт / 19 610 руб</span></div>
+                          </li>
+                          <li class="form-table__item">
+                            <div class="form-table__left"><span class="form-table__text">Лаги проф. труба 40х20 мм (в 2 ряда)</span></div>
+                            <div class="form-table__right"><span class="form-table__text">186 п.м / 15 066 руб</span></div>
+                          </li>
+                          <li class="form-table__item">
+                            <div class="form-table__left"><span class="form-table__text">Грунтовка металл ГФ032 корич</span></div>
+                            <div class="form-table__right"><span class="form-table__text">386 п.м / 4 632 руб</span></div>
+                          </li>
+                          <li class="form-table__item">
+                            <div class="form-table__left"><span class="form-table__text">Профлист полимерный, 0,5мм</span></div>
+                            <div class="form-table__right"><span class="form-table__text">88 лист / 57 802 руб</span></div>
+                          </li>
+                          <li class="form-table__item">
+                            <div class="form-table__left"><span class="form-table__text">Ворота распашные Эконом, ш=3.5м</span></div>
+                            <div class="form-table__right"><span class="form-table__text">2 шт / 9 850 руб</span></div>
+                          </li>
+                          <li class="form-table__item">
+                            <div class="form-table__left"><span class="form-table__text">Калитка Эконом, ш=1.2м</span><span class="form-table__info" data-tooltip="Подробности уточняйте у менеджера по телефону">i</span></div>
+                            <div class="form-table__right"><span class="form-table__text">1 шт / 2 335 руб</span></div>
+                          </li>
+                          <li class="form-table__item">
+                            <div class="form-table__left"><span class="form-table__text form-table__text--total">Общая стоимость материалов:</span></div>
+                            <div class="form-table__right"><span class="form-table__text form-table__text--total">109 295 руб</span></div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="form-table">
+                        <ul class="form-table__list">
+                          <li class="form-table__item form-table__item--title">
+                            <div class="form-table__left"><span class="form-table__text form-table__text--title">Наименование работ</span></div>
+                            <div class="form-table__right"><span class="form-table__text form-table__text--title">Цена</span></div>
+                          </li>
+                          <li class="form-table__item">
+                            <div class="form-table__left"><span class="form-table__text">Столб проф. труба 60х60 мм h=2700 мм</span></div>
+                            <div class="form-table__right"><span class="form-table__text">37 шт / 19 610 руб</span></div>
+                          </li>
+                          <li class="form-table__item">
+                            <div class="form-table__left"><span class="form-table__text">Лаги проф. труба 40х20 мм (в 2 ряда)</span></div>
+                            <div class="form-table__right"><span class="form-table__text">186 п.м / 15 066 руб</span></div>
+                          </li>
+                          <li class="form-table__item">
+                            <div class="form-table__left"><span class="form-table__text">Грунтовка металл ГФ032 корич</span></div>
+                            <div class="form-table__right"><span class="form-table__text">386 п.м / 4 632 руб</span></div>
+                          </li>
+                          <li class="form-table__item">
+                            <div class="form-table__left"><span class="form-table__text form-table__text--total">Общая стоимость работ:</span></div>
+                            <div class="form-table__right"><span class="form-table__text form-table__text--total">30 015 руб</span></div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="form-price">
+                        <div class="form-price__text">Расстояние от МКАД</div>
+                        <div class="form-price__slider">
+                          <div class="rail"><a class="ui-slider-handle" href="#">
+                              <div id="rail-result">0</div></a>
+                            <input id="value" name="znch" type="hidden"><span class="rail__value-start">0</span><span class="rail__value-end">100</span>
                           </div>
-                        </label>
-                      </label>
+                        </div>
+                        <script type="text/javascript">
+                          $(document).ready(function(){
+                              $( ".rail" ).slider({
+                                  animate: true,
+                                  range: "min",
+                                  value: 0,
+                                  min: 1,
+                                  max: 100,
+                                  step: 1,
+                                  slide: function( event, ui ) {
+                                      $( "#rail-result" ).html(ui.value);
+                                  },
+                                  change: function(event, ui) {
+                                      $('#value').attr('value', ui.value);
+                                  }
+                              });
+                          });
+                        </script>
+                        <div class="form-price__icon">
+                          <svg class="form-price__pic">
+                            <use xlink:href="assets/images/icons/sprite.svg#right-arrow"></use>
+                          </svg>
+                        </div>
+                        <div class="form-price__text">стоимость доставки </div>
+                        <div class="form-price__field">
+                          <input class="form-price__input" type="text" name="price" required>
+                        </div>
+                        <div class="form-price__text">руб</div>
+                      </div>
+                      <div class="form-total">
+                        <div class="form-total__col-l">
+                          <div class="form-total__text">Итоговая сумма:<span class="form-total__text-value">137 124 РУБ</span></div>
+                        </div>
+                        <div class="form-total__col-r"><a class="form-total__action" href="#">
+                            <svg class="form-total__icon">
+                              <use xlink:href="assets/images/icons/sprite.svg#download"></use>
+                            </svg></a><a class="form-total__action" href="#">
+                            <svg class="form-total__icon">
+                              <use xlink:href="assets/images/icons/sprite.svg#print"></use>
+                            </svg></a></div>
+                      </div>
+                      <div class="form__application">
+                        <div class="form__subtitle form__subtitle--application">Отправить заявку для детального расчета</div>
+                        <div class="form__row form__row--application">
+                          <label class="form__block">
+                            <input class="form__input" type="text" name="user-name" placeholder="Имя">
+                          </label>
+                          <label class="form__block">
+                            <input class="form__input" type="text" name="user-mail" placeholder="Телефон или Email" required>
+                          </label>
+                          <button class="form__button form__button--application" type="submit">
+                            <div class="form__btn-text form__btn-text--dark">отправить</div>
+                            <svg class="form__btn-icon form__btn-icon--dark">
+                              <use xlink:href="assets/images/icons/sprite.svg#right-arrow"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
                     </div>
-                    <button class="form__button form__button--dark form__button--calc" type="submit">
-                      <div class="form__btn-text form__btn-text--dark form__btn-text--bold">продолжить расчет</div>
-                      <svg class="form__btn-icon form__btn-icon--dark">
-                        <use xlink:href="assets/images/icons/sprite.svg#right-arrow"></use>
-                      </svg>
-                    </button>
-                  </div>
-                  <div class="form__col-r">
-                    <div class="form__image"><img class="form__pic" src="./assets/images/pic/calc-one.jpg" alt="picture"></div>
-                    <div class="form__caption">Вы можете указать интересующий вид профнастила</div>
-                    <div class="form__row">
-                      <label class="form__block">
-                        <input class="form__radio visuallyhidden" type="radio" name="options" value="вид">
-                        <div class="form__radio-fake form__radio-fake--green"></div>
-                        <div class="form__subtitle form__subtitle--margin-left">С-8х1150</div>
-                      </label>
-                      <label class="form__block">
-                        <input class="form__radio visuallyhidden" type="radio" name="options" value="вид">
-                        <div class="form__radio-fake form__radio-fake--green"></div>
-                        <div class="form__subtitle form__subtitle--margin-left">С-21х1000</div>
-                      </label>
-                      <label class="form__block">
-                        <input class="form__radio visuallyhidden" type="radio" name="options" value="вид">
-                        <div class="form__radio-fake form__radio-fake--green"></div>
-                        <div class="form__subtitle form__subtitle--margin-left">МП-20х1100</div>
-                      </label>
-                      <label class="form__block">
-                        <input class="form__radio visuallyhidden" type="radio" name="options" value="вид">
-                        <div class="form__radio-fake form__radio-fake--green"></div>
-                        <div class="form__subtitle form__subtitle--margin-left">МП-35х1035</div>
-                      </label>
-                    </div>
-                    <div class="form__text form__text--dark form__text--90">
-                      <p>Оцинкованный профильный лист с цветным полимерным покрытием с одной стороны и светло-серым грунтовым покрытием, защищенным лаком, с другой стороны. Толщина стального листа от 0,35мм до 0,7мм. Выбор цвета имеет большой ассортимент.</p>
-                    </div>
-                    <div class="form__colors"> 
-                      <p>Цветовая палитра содержит все <a class="form__colors-link" href="#" target="blanc">цвета стандарта RAL </a>- 213 вариантов.</p>
-                    </div>
-                  </div>
-                </div>
+                  </li>
+                </ul>
               </form>
             </div>
           </div>
         </div>
-        <!-- второй шаг калькулятора (меняются '.tabs' и содержимое '.form__columns')-->
-        <div class="calc">
-          <div class="container">
-            <div class="calc__wrap">
-              <form class="form form--grey form--calc">
-                <div class="block-title">
-                  <div class="block-title__number">01.</div>
-                  <h2 class="block-title__text">расчет <br>стоимости</h2>
-                </div>
-                <div class="form__tabs">
-                  <div class="tabs">
-                    <ul class="tabs__list">
-                      <li class="tabs__item"><a class="tabs__link active" href="#">
-                          <div class="tabs__obj">Выбор покрытия</div>
-                          <svg class="tabs__icon">
-                            <use xlink:href="assets/images/icons/sprite.svg#right"></use>
-                          </svg></a></li>
-                      <li class="tabs__item"><a class="tabs__link selected" href="#">
-                          <div class="tabs__obj">Высота забора</div>
-                          <svg class="tabs__icon">
-                            <use xlink:href="assets/images/icons/sprite.svg#right"></use>
-                          </svg></a></li>
-                      <li class="tabs__item"><a class="tabs__link" href="#">
-                          <div class="tabs__obj">Кол-во горизонталей (лаг)</div>
-                          <svg class="tabs__icon">
-                            <use xlink:href="assets/images/icons/sprite.svg#right"></use>
-                          </svg></a></li>
-                      <li class="tabs__item"><a class="tabs__link" href="#">
-                          <div class="tabs__obj">Кол-во ворот</div>
-                          <svg class="tabs__icon">
-                            <use xlink:href="assets/images/icons/sprite.svg#right"></use>
-                          </svg></a></li>
-                      <li class="tabs__item"><a class="tabs__link" href="#">
-                          <div class="tabs__obj">Кол-во калиток</div>
-                          <svg class="tabs__icon">
-                            <use xlink:href="assets/images/icons/sprite.svg#right"></use>
-                          </svg></a></li>
-                      <li class="tabs__item"><a class="tabs__link tabs__link--result" href="#">
-                          <div class="tabs__result">Результат:</div>
-                          <div class="tabs__value">265000 р</div></a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="form__columns">     
-                  <div class="form__col-l form__col-l--resize">
-                    <div class="form__row">
-                      <label class="form__block form__block--no-flex">
-                        <div class="form__subtitle form__subtitle--dark">Высота забора:</div>
-                        <input class="form__input" type="text" name="length" required>
-                      </label>
-                    </div>
-                    <button class="form__button form__button--dark form__button--calc" type="submit">
-                      <div class="form__btn-text form__btn-text--dark form__btn-text--bold">продолжить расчет</div>
-                      <svg class="form__btn-icon form__btn-icon--dark">
-                        <use xlink:href="assets/images/icons/sprite.svg#right-arrow"></use>
-                      </svg>
-                    </button>
-                  </div>
-                  <div class="form__col-r form__col-r--resize">
-                    <div class="form__image form__image--resize"><img class="form__pic" src="./assets/images/pic/calc-two.png" alt="picture"><span class="form__obj-one">1.5м</span></div>
-                    <div class="form__text form__text--dark form__text--90 form__text--resize">
-                      <p>Lorem ipsum dolor sit amet consecteturlor sit amet co adipisicing elit. Ducimus deleniti ut nulla aut totam. Nulla maxime repellendus fugit tenetur provident in. Beatae, aliquid. Quo, ea veritatis sint odio labore cum.</p>
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-        <!-- третий шаг калькулятора (меняются '.tabs' и содержимое '.form__columns')-->
-        <div class="calc">
-          <div class="container">
-            <div class="calc__wrap">
-              <form class="form form--grey form--calc">
-                <div class="block-title">
-                  <div class="block-title__number">01.</div>
-                  <h2 class="block-title__text">расчет <br>стоимости</h2>
-                </div>
-                <div class="form__tabs">
-                  <div class="tabs">
-                    <ul class="tabs__list">
-                      <li class="tabs__item"><a class="tabs__link active" href="#">
-                          <div class="tabs__obj">Выбор покрытия</div>
-                          <svg class="tabs__icon">
-                            <use xlink:href="assets/images/icons/sprite.svg#right"></use>
-                          </svg></a></li>
-                      <li class="tabs__item"><a class="tabs__link active" href="#">
-                          <div class="tabs__obj">Высота забора</div>
-                          <svg class="tabs__icon">
-                            <use xlink:href="assets/images/icons/sprite.svg#right"></use>
-                          </svg></a></li>
-                      <li class="tabs__item"><a class="tabs__link selected" href="#">
-                          <div class="tabs__obj">Кол-во горизонталей (лаг)</div>
-                          <svg class="tabs__icon">
-                            <use xlink:href="assets/images/icons/sprite.svg#right"></use>
-                          </svg></a></li>
-                      <li class="tabs__item"><a class="tabs__link" href="#">
-                          <div class="tabs__obj">Кол-во ворот</div>
-                          <svg class="tabs__icon">
-                            <use xlink:href="assets/images/icons/sprite.svg#right"></use>
-                          </svg></a></li>
-                      <li class="tabs__item"><a class="tabs__link" href="#">
-                          <div class="tabs__obj">Кол-во калиток</div>
-                          <svg class="tabs__icon">
-                            <use xlink:href="assets/images/icons/sprite.svg#right"></use>
-                          </svg></a></li>
-                      <li class="tabs__item"><a class="tabs__link tabs__link--result" href="#">
-                          <div class="tabs__result">Результат:</div>
-                          <div class="tabs__value">265000 р</div></a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="form__columns">     
-                  <div class="form__col-l form__col-l--resize">
-                    <div class="form__row">
-                      <label class="form__block form__block--no-flex">
-                        <div class="form__subtitle form__subtitle--dark">Кол-во горизонталей (лаг)</div>
-                      </label>
-                    </div>
-                    <div class="form__row form__row--flex-start">
-                      <label class="form__block form__block--flex-0">
-                        <input class="form__radio visuallyhidden" type="radio" name="options" value="количество">
-                        <div class="form__radio-fake form__radio-fake--square">2</div>
-                      </label>
-                      <label class="form__block form__block--flex-0">
-                        <input class="form__radio visuallyhidden" type="radio" name="options" value="количество">
-                        <div class="form__radio-fake form__radio-fake--square">3</div>
-                      </label>
-                    </div>
-                    <button class="form__button form__button--dark form__button--calc" type="submit">
-                      <div class="form__btn-text form__btn-text--dark form__btn-text--bold">продолжить расчет</div>
-                      <svg class="form__btn-icon form__btn-icon--dark">
-                        <use xlink:href="assets/images/icons/sprite.svg#right-arrow"></use>
-                      </svg>
-                    </button>
-                  </div>
-                  <div class="form__col-r form__col-r--resize">
-                    <div class="form__image form__image--resize"><img class="form__pic" src="./assets/images/pic/calc-three.png" alt="picture"><span class="form__obj-one">1.5м</span></div>
-                    <div class="form__text form__text--dark form__text--90 form__text--resize">
-                      <p>Lorem ipsum dolor sit amet consecteturlor sit amet co adipisicing elit. Ducimus deleniti ut nulla aut totam. Nulla maxime repellendus fugit tenetur provident in. Beatae, aliquid. Quo, ea veritatis sint odio labore cum.</p>
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-        <!-- четвертый шаг калькулятора (меняются '.tabs' и содержимое '.form__columns')-->
-        <div class="calc">
-          <div class="container">
-            <div class="calc__wrap">
-              <form class="form form--grey form--calc">
-                <div class="block-title">
-                  <div class="block-title__number">01.</div>
-                  <h2 class="block-title__text">расчет <br>стоимости</h2>
-                </div>
-                <div class="form__tabs">
-                  <div class="tabs">
-                    <ul class="tabs__list">
-                      <li class="tabs__item"><a class="tabs__link active" href="#">
-                          <div class="tabs__obj">Выбор покрытия</div>
-                          <svg class="tabs__icon">
-                            <use xlink:href="assets/images/icons/sprite.svg#right"></use>
-                          </svg></a></li>
-                      <li class="tabs__item"><a class="tabs__link active" href="#">
-                          <div class="tabs__obj">Высота забора</div>
-                          <svg class="tabs__icon">
-                            <use xlink:href="assets/images/icons/sprite.svg#right"></use>
-                          </svg></a></li>
-                      <li class="tabs__item"><a class="tabs__link active" href="#">
-                          <div class="tabs__obj">Кол-во горизонталей (лаг)</div>
-                          <svg class="tabs__icon">
-                            <use xlink:href="assets/images/icons/sprite.svg#right"></use>
-                          </svg></a></li>
-                      <li class="tabs__item"><a class="tabs__link selected" href="#">
-                          <div class="tabs__obj">Кол-во ворот</div>
-                          <svg class="tabs__icon">
-                            <use xlink:href="assets/images/icons/sprite.svg#right"></use>
-                          </svg></a></li>
-                      <li class="tabs__item"><a class="tabs__link" href="#">
-                          <div class="tabs__obj">Кол-во калиток</div>
-                          <svg class="tabs__icon">
-                            <use xlink:href="assets/images/icons/sprite.svg#right"></use>
-                          </svg></a></li>
-                      <li class="tabs__item"><a class="tabs__link tabs__link--result" href="#">
-                          <div class="tabs__result">Результат:</div>
-                          <div class="tabs__value">265000 р</div></a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="form__columns">     
-                  <div class="form__col-l form__col-l--resize">
-                    <div class="form__row form__row--selects">
-                      <label class="form__block form__block--no-flex">
-                        <div class="form__subtitle form__subtitle--no-margin form__subtitle--dark">Количество ворот</div>
-                        <label class="form__select" for="select">
-                          <input id="bg" type="radio" name="list" value="not_changed" checked="">
-                          <input id="select" type="radio" name="list" value="not_changed">
-                          <label class="bg" for="bg"></label>
-                          <div class="items">
-                            <input type="radio" name="list" value="first_value" id="list[0]">
-                            <label class="green" for="list[0]">1</label>
-                            <input type="radio" name="list" value="second_value" id="list[1]">
-                            <label class="green" for="list[1]">2</label>
-                            <input type="radio" name="list" value="third_value" id="list[2]">
-                            <label class="green" for="list[2]">3</label>
-                            <input type="radio" name="list" value="fourth_value" id="list[3]">
-                            <label class="green" for="list[3]">4</label>
-                          </div>
-                        </label>
-                      </label>
-                    </div>
-                    <div class="form__row form__row--selects">
-                      <label class="form__block form__block--no-flex">
-                        <div class="form__subtitle form__subtitle--no-margin form__subtitle--dark">Ширина ворот</div>
-                        <label class="form__select" for="select">
-                          <input id="bg" type="radio" name="list" value="not_changed" checked="">
-                          <input id="select" type="radio" name="list" value="not_changed">
-                          <label class="bg" for="bg"></label>
-                          <div class="items">
-                            <input type="radio" name="list" value="first_value" id="list[0]">
-                            <label class="green" for="list[0]">2м</label>
-                            <input type="radio" name="list" value="second_value" id="list[1]">
-                            <label class="green" for="list[1]">3м</label>
-                            <input type="radio" name="list" value="third_value" id="list[2]">
-                            <label class="green" for="list[2]">4м</label>
-                            <input type="radio" name="list" value="fourth_value" id="list[3]">
-                            <label class="green" for="list[3]">5м</label>
-                          </div>
-                        </label>
-                      </label>
-                    </div>
-                    <button class="form__button form__button--dark form__button--calc" type="submit">
-                      <div class="form__btn-text form__btn-text--dark form__btn-text--bold">продолжить расчет</div>
-                      <svg class="form__btn-icon form__btn-icon--dark">
-                        <use xlink:href="assets/images/icons/sprite.svg#right-arrow"></use>
-                      </svg>
-                    </button>
-                  </div>
-                  <div class="form__col-r form__col-r--resize">
-                    <div class="form__image form__image--resize-2"><img class="form__pic" src="./assets/images/pic/calc-four.png" alt="picture"><span class="form__obj-one">1.5м</span><span class="form__obj-two">2</span><span class="form__obj-three">3м</span></div>
-                    <div class="form__text form__text--dark form__text--90 form__text--resize">
-                      <p>Lorem ipsum dolor sit amet consecteturlor sit amet co adipisicing elit. Ducimus deleniti ut nulla aut totam. Nulla maxime repellendus fugit tenetur provident in. Beatae, aliquid. Quo, ea veritatis sint odio labore cum.</p>
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-        <!-- пятый шаг калькулятора (меняются '.tabs' и содержимое '.form__columns')-->
-        <div class="calc">
-          <div class="container">
-            <div class="calc__wrap">
-              <form class="form form--grey form--calc">
-                <div class="block-title">
-                  <div class="block-title__number">01.</div>
-                  <h2 class="block-title__text">расчет <br>стоимости</h2>
-                </div>
-                <div class="form__tabs">
-                  <div class="tabs">
-                    <ul class="tabs__list">
-                      <li class="tabs__item"><a class="tabs__link active" href="#">
-                          <div class="tabs__obj">Выбор покрытия</div>
-                          <svg class="tabs__icon">
-                            <use xlink:href="assets/images/icons/sprite.svg#right"></use>
-                          </svg></a></li>
-                      <li class="tabs__item"><a class="tabs__link active" href="#">
-                          <div class="tabs__obj">Высота забора</div>
-                          <svg class="tabs__icon">
-                            <use xlink:href="assets/images/icons/sprite.svg#right"></use>
-                          </svg></a></li>
-                      <li class="tabs__item"><a class="tabs__link active" href="#">
-                          <div class="tabs__obj">Кол-во горизонталей (лаг)</div>
-                          <svg class="tabs__icon">
-                            <use xlink:href="assets/images/icons/sprite.svg#right"></use>
-                          </svg></a></li>
-                      <li class="tabs__item"><a class="tabs__link active" href="#">
-                          <div class="tabs__obj">Кол-во ворот</div>
-                          <svg class="tabs__icon">
-                            <use xlink:href="assets/images/icons/sprite.svg#right"></use>
-                          </svg></a></li>
-                      <li class="tabs__item"><a class="tabs__link selected" href="#">
-                          <div class="tabs__obj">Кол-во калиток</div>
-                          <svg class="tabs__icon">
-                            <use xlink:href="assets/images/icons/sprite.svg#right"></use>
-                          </svg></a></li>
-                      <li class="tabs__item"><a class="tabs__link tabs__link--result" href="#">
-                          <div class="tabs__result">Результат:</div>
-                          <div class="tabs__value">265000 р</div></a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="form__columns">     
-                  <div class="form__col-l form__col-l--resize">
-                    <div class="form__row form__row--selects">
-                      <label class="form__block form__block--no-flex">
-                        <div class="form__subtitle form__subtitle--no-margin form__subtitle--dark">Количество калиток</div>
-                        <label class="form__select" for="select">
-                          <input id="bg" type="radio" name="list" value="not_changed" checked="">
-                          <input id="select" type="radio" name="list" value="not_changed">
-                          <label class="bg" for="bg"></label>
-                          <div class="items">
-                            <input type="radio" name="list" value="first_value" id="list[0]">
-                            <label class="green" for="list[0]">1</label>
-                            <input type="radio" name="list" value="second_value" id="list[1]">
-                            <label class="green" for="list[1]">2</label>
-                            <input type="radio" name="list" value="third_value" id="list[2]">
-                            <label class="green" for="list[2]">3</label>
-                            <input type="radio" name="list" value="fourth_value" id="list[3]">
-                            <label class="green" for="list[3]">4</label>
-                          </div>
-                        </label>
-                      </label>
-                    </div>
-                    <button class="form__button form__button--dark form__button--calc" type="submit">
-                      <div class="form__btn-text form__btn-text--dark form__btn-text--bold">продолжить расчет</div>
-                      <svg class="form__btn-icon form__btn-icon--dark">
-                        <use xlink:href="assets/images/icons/sprite.svg#right-arrow"></use>
-                      </svg>
-                    </button>
-                  </div>
-                  <div class="form__col-r form__col-r--resize">
-                    <div class="form__image form__image--resize-2"><img class="form__pic" src="./assets/images/pic/calc-five.png" alt="picture"><span class="form__obj-one">1.5м</span><span class="form__obj-two">2</span><span class="form__obj-three">3м</span><span class="form__obj-four">2</span></div>
-                    <div class="form__text form__text--dark form__text--90 form__text--resize">
-                      <p>Lorem ipsum dolor sit amet consecteturlor sit amet co adipisicing elit. Ducimus deleniti ut nulla aut totam. Nulla maxime repellendus fugit tenetur provident in. Beatae, aliquid. Quo, ea veritatis sint odio labore cum.</p>
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-        <div class="calc">
-          <div class="container">
-            <div class="calc__wrap">
-              <form class="form form--grey form--calc">
-                <div class="block-title">
-                  <div class="block-title__number">01.</div>
-                  <h2 class="block-title__text">расчет <br>стоимости</h2>
-                </div>
-                <div class="form__tabs">
-                  <div class="tabs">
-                    <ul class="tabs__list">
-                      <li class="tabs__item"><a class="tabs__link active" href="#">
-                          <div class="tabs__obj">Выбор покрытия</div>
-                          <svg class="tabs__icon">
-                            <use xlink:href="assets/images/icons/sprite.svg#right"></use>
-                          </svg></a></li>
-                      <li class="tabs__item"><a class="tabs__link active" href="#">
-                          <div class="tabs__obj">Высота забора</div>
-                          <svg class="tabs__icon">
-                            <use xlink:href="assets/images/icons/sprite.svg#right"></use>
-                          </svg></a></li>
-                      <li class="tabs__item"><a class="tabs__link active" href="#">
-                          <div class="tabs__obj">Кол-во горизонталей (лаг)</div>
-                          <svg class="tabs__icon">
-                            <use xlink:href="assets/images/icons/sprite.svg#right"></use>
-                          </svg></a></li>
-                      <li class="tabs__item"><a class="tabs__link active" href="#">
-                          <div class="tabs__obj">Кол-во ворот</div>
-                          <svg class="tabs__icon">
-                            <use xlink:href="assets/images/icons/sprite.svg#right"></use>
-                          </svg></a></li>
-                      <li class="tabs__item"><a class="tabs__link active" href="#">
-                          <div class="tabs__obj">Кол-во калиток</div>
-                          <svg class="tabs__icon">
-                            <use xlink:href="assets/images/icons/sprite.svg#right"></use>
-                          </svg></a></li>
-                      <li class="tabs__item"><a class="tabs__link tabs__link--result selected" href="#">
-                          <div class="tabs__result">Результат:</div>
-                          <div class="tabs__value">265000 р</div></a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="form__result">
-                  <div class="form-table">
-                    <h2 class="form-table__title">Детальный расчет</h2>
-                    <ul class="form-table__list">
-                      <li class="form-table__item form-table__item--title">
-                        <div class="form-table__left"><span class="form-table__text form-table__text--title">Материалы</span></div>
-                        <div class="form-table__right"><span class="form-table__text form-table__text--title">Цена</span></div>
-                      </li>
-                      <li class="form-table__item">
-                        <div class="form-table__left"><span class="form-table__text">Столб проф. труба 60х60 мм h=2700 мм</span><span class="form-table__info">i</span></div>
-                        <div class="form-table__right"><span class="form-table__text">37 шт / 19 610 руб</span></div>
-                      </li>
-                      <li class="form-table__item">
-                        <div class="form-table__left"><span class="form-table__text">Лаги проф. труба 40х20 мм (в 2 ряда)</span></div>
-                        <div class="form-table__right"><span class="form-table__text">186 п.м / 15 066 руб</span></div>
-                      </li>
-                      <li class="form-table__item">
-                        <div class="form-table__left"><span class="form-table__text">Грунтовка металл ГФ032 корич</span></div>
-                        <div class="form-table__right"><span class="form-table__text">386 п.м / 4 632 руб</span></div>
-                      </li>
-                      <li class="form-table__item">
-                        <div class="form-table__left"><span class="form-table__text">Профлист полимерный, 0,5мм</span></div>
-                        <div class="form-table__right"><span class="form-table__text">88 лист / 57 802 руб</span></div>
-                      </li>
-                      <li class="form-table__item">
-                        <div class="form-table__left"><span class="form-table__text">Ворота распашные Эконом, ш=3.5м</span></div>
-                        <div class="form-table__right"><span class="form-table__text">2 шт / 9 850 руб</span></div>
-                      </li>
-                      <li class="form-table__item">
-                        <div class="form-table__left"><span class="form-table__text">Калитка Эконом, ш=1.2м</span><span class="form-table__info">i</span></div>
-                        <div class="form-table__right"><span class="form-table__text">1 шт / 2 335 руб</span></div>
-                      </li>
-                      <li class="form-table__item">
-                        <div class="form-table__left"><span class="form-table__text form-table__text--total">Общая стоимость материалов:</span></div>
-                        <div class="form-table__right"><span class="form-table__text form-table__text--total">109 295 руб</span></div>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="form-table">
-                    <ul class="form-table__list">
-                      <li class="form-table__item form-table__item--title">
-                        <div class="form-table__left"><span class="form-table__text form-table__text--title">Наименование работ</span></div>
-                        <div class="form-table__right"><span class="form-table__text form-table__text--title">Цена</span></div>
-                      </li>
-                      <li class="form-table__item">
-                        <div class="form-table__left"><span class="form-table__text">Столб проф. труба 60х60 мм h=2700 мм</span></div>
-                        <div class="form-table__right"><span class="form-table__text">37 шт / 19 610 руб</span></div>
-                      </li>
-                      <li class="form-table__item">
-                        <div class="form-table__left"><span class="form-table__text">Лаги проф. труба 40х20 мм (в 2 ряда)</span></div>
-                        <div class="form-table__right"><span class="form-table__text">186 п.м / 15 066 руб</span></div>
-                      </li>
-                      <li class="form-table__item">
-                        <div class="form-table__left"><span class="form-table__text">Грунтовка металл ГФ032 корич</span></div>
-                        <div class="form-table__right"><span class="form-table__text">386 п.м / 4 632 руб</span></div>
-                      </li>
-                      <li class="form-table__item">
-                        <div class="form-table__left"><span class="form-table__text form-table__text--total">Общая стоимость работ:</span></div>
-                        <div class="form-table__right"><span class="form-table__text form-table__text--total">30 015 руб</span></div>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="form-price">
-                    <div class="form-price__text">Расстояние от МКАД</div>
-                    <div class="form-price__slider">
-                      <div class="rail"></div>
-                    </div>
-                    <div class="form-price__icon">
-                      <!-- svg icon-->
-                    </div>
-                    <div class="form-price__text">стоимость доставки </div>
-                    <div class="form-price__input">
-                      <!-- input-->
-                    </div>
-                    <div class="form-price__text">руб</div>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-        <!---->
         <div class="content">
           <div class="container">
             <div class="content__wrap">
@@ -774,9 +666,7 @@
                   </div>
                 </div>
                 <div class="reviews__desk">
-                  <div class="reviews__image">
-                    <div class="reviews__avatar"></div>
-                  </div>
+                  <div class="reviews__image"><img class="reviews__avatar" src="./assets/images/pic/avatar.jpg" alt="avatar"></div>
                   <div class="reviews__content">
                     <div class="reviews__name">Михаил<br>Добкин</div>
                     <div class="reviews__position">г. Мытищи</div>

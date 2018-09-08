@@ -8,9 +8,9 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <link rel="stylesheet" href="./assets/styles/app.min.css">
-    <!--link(rel="icon" type="image/x-icon" href="./assets/images/favicon.ico")-->
     <script src="./assets/scripts/bundle.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -21,7 +21,7 @@
             <div class="header__menu">
               <ul class="menu">
                 <li class="menu__item"><a class="menu__link" href="index.html">главная </a></li>
-                <li class="menu__item"><a class="menu__link menu__link--dropdown" href="#">услуги</a>
+                <li class="menu__item"><a class="menu__link" href="#">услуги</a>
                   <ul class="dropdown">
                     <li class="dropdown__item"><a class="dropdown__link" href="calculator.html">Заборы из профнастила</a></li>
                     <li class="dropdown__item"><a class="dropdown__link" href="#">Заборы из сетки рабицы</a></li>
@@ -45,8 +45,10 @@
                     <use xlink:href="assets/images/icons/sprite.svg#phone"></use>
                   </svg>
                 </div>
-                <div class="header__number">8 (926) 289-42-23</div>
-                <div class="header__text">перезвонить мне</div></a></div>
+                <div class="header__phone">
+                  <div class="header__number">8 (926) 289-42-23</div>
+                  <div class="header__text">перезвонить мне</div>
+                </div></a></div>
           </div>
         </div>
       </header>
@@ -227,13 +229,13 @@
                       <label class="form__block form__block--no-flex">
                         <div class="form__subtitle form__subtitle--no-margin">Тип забора:</div>
                         <label class="form__select" for="select">
-                          <input id="bg" type="radio" name="list" value="not_changed" checked="">
-                          <input id="select" type="radio" name="list" value="not_changed">
+                          <input id="bg" type="radio" name="fence-type" value="not_changed" checked="">
+                          <input id="select" type="radio" name="fence-type" value="not_changed">
                           <label class="bg" for="bg"></label>
                           <div class="items">
-                            <input type="radio" name="list" value="first_value" id="list[0]">
+                            <input type="radio" name="fence-type" value="first_value" id="list[0]">
                             <label for="list[0]">Заборы из профнастила</label>
-                            <input type="radio" name="list" value="second_value" id="list[1]">
+                            <input type="radio" name="fence-type" value="second_value" id="list[1]">
                             <label for="list[1]">Заборы из дерева</label>
                           </div>
                         </label>
@@ -282,7 +284,7 @@
                 <div class="projects__box projects__box--no-padings">
                   <div class="carousel">
                     <ul class="carousel__list">
-                      <li class="carousel__item">
+                      <li class="carousel__item"><img class="carousel__image" src="./assets/images/slide-one.jpg" alt="stock">
                         <div class="carousel__image-wrap">
                           <div class="carousel__heading">
                             <div class="carousel__question">Хотите окраску<br>забора <span class="carousel__question-color">в подарок?</span></div>
@@ -718,9 +720,7 @@
                   </div>
                 </div>
                 <div class="reviews__desk">
-                  <div class="reviews__image">
-                    <div class="reviews__avatar"></div>
-                  </div>
+                  <div class="reviews__image"><img class="reviews__avatar" src="./assets/images/pic/avatar.jpg" alt="avatar"></div>
                   <div class="reviews__content">
                     <div class="reviews__name">Михаил<br>Добкин</div>
                     <div class="reviews__position">г. Мытищи</div>
