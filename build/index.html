@@ -17,7 +17,13 @@
       <header class="header">
         <div class="container">
           <div class="header__wrap">
-            <div class="header__logo"><a class="header__link" href="index.html"><img class="header__pic" src="./assets/images/icons/Logo.png" alt="logo"></a></div>
+            <div class="header__logo"><a class="header__link" href="index.html">
+                <!--img.header__pic(src="./assets/images/icons/logo-st.png" alt="logo")-->
+                <div class="header__pic"></div>
+                <div class="header__pic-text">
+                  <div class="header__pic-text1">склад</div>
+                  <div class="header__pic-text2">заборов</div>
+                </div></a></div>
             <div class="header__menu">
               <ul class="menu">
                 <li class="menu__item"><a class="menu__link" href="index.html">главная </a></li>
@@ -49,13 +55,39 @@
                   <div class="header__number">8 (926) 289-42-23</div>
                   <div class="header__text">перезвонить мне</div>
                 </div></a></div>
+            <button class="hamburger" type="button" id="openFull">
+              <div class="hamburger__menu"></div>
+            </button>
+          </div>
+        </div>
+        <div class="header__mob-menu">
+          <div class="container">
+            <ul class="menu">
+              <li class="menu__item"><a class="menu__link" href="index.html">главная </a></li>
+              <li class="menu__item" id="openDrop"><a class="menu__link" href="calculator.html">услуги</a>
+                <ul class="dropdown">
+                  <li class="dropdown__item"><a class="dropdown__link" href="calculator.html">Заборы из профнастила</a></li>
+                  <li class="dropdown__item"><a class="dropdown__link" href="#">Заборы из сетки рабицы</a></li>
+                  <li class="dropdown__item"><a class="dropdown__link" href="#">Заборы из дерева</a></li>
+                  <li class="dropdown__item"><a class="dropdown__link" href="#">Заборы из евроштакетника</a></li>
+                  <li class="dropdown__item"><a class="dropdown__link" href="#">Заборы из евроштакетника</a></li>
+                  <li class="dropdown__item"><a class="dropdown__link" href="#">Монолитные заборы</a></li>
+                  <li class="dropdown__item"><a class="dropdown__link" href="#">Ворота и калитки</a></li>
+                  <li class="dropdown__item"><a class="dropdown__link" href="#">Откатные ворота</a></li>
+                  <li class="dropdown__item"><a class="dropdown__link" href="#">Теплицы из поликарбоната</a></li>
+                  <li class="dropdown__item"><a class="dropdown__link" href="#">Навесы и беседки из поликарбоната</a></li>
+                </ul>
+              </li>
+              <li class="menu__item"><a class="menu__link" href="works.html">наши работы </a></li>
+              <li class="menu__item"><a class="menu__link" href="contacts.html">контакты</a></li>
+            </ul>
           </div>
         </div>
       </header>
       <section class="section">
         <div class="section__under">
           <div class="section__under-img" style="background-image: url(./assets/images/bg-one.jpg);">
-            <div class="section__image-wrap"></div>
+            <div class="section__image-wrap section__image-wrap--darken"></div>
           </div>
         </div>
         <div class="hero">
@@ -144,9 +176,13 @@
               <div class="info__col-l">
                 <div class="info__row">
                   <div class="info__desk">
-                    <div class="block-title">
+                    <div class="block-title block-title--visible">
                       <div class="block-title__number">01.</div>
                       <h2 class="block-title__text">информация <br>о компании </h2>
+                    </div>
+                    <div class="block-title block-title--hide">
+                      <div class="block-title__number">02.</div>
+                      <h2 class="block-title__text">информация <br>о компании</h2>
                     </div>
                     <div class="info__text">
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
@@ -207,18 +243,22 @@
               <div class="info__col-r">
                 <form class="form form--green">
                   <div class="form__wrap">
-                    <div class="block-title">
+                    <div class="block-title block-title--visible">
                       <div class="block-title__number block-title__number--light">02.</div>
                       <h2 class="block-title__text block-title__text--light">расчет<br>стоимости</h2>
                     </div>
+                    <div class="block-title block-title--hide">
+                      <div class="block-title__number block-title__number--light">01.</div>
+                      <h2 class="block-title__text block-title__text--light">расчет<br>стоимости</h2>
+                    </div>
                     <div class="form__row form__row--flex">
-                      <div class="form__box">
+                      <div class="form__box form__box--100">
                         <label class="form__block form__block--no-flex">
                           <div class="form__subtitle">Длина забора:</div>
                           <input class="form__input form__input--short" type="text" name="length" required>
                         </label>
                       </div>
-                      <div class="form__box">
+                      <div class="form__box form__box--hide">
                         <label class="form__block form__block--flex">
                           <div class="form__subtitle form__subtitle--radio">Метры -</div>
                           <input class="form__radio visuallyhidden" type="radio" name="options" value="метры">
@@ -228,6 +268,16 @@
                           <div class="form__subtitle form__subtitle--radio">Сотки -</div>
                           <input class="form__radio visuallyhidden" type="radio" name="options" value="сотки">
                           <div class="form__radio-fake"></div>
+                        </label>
+                      </div>
+                      <div class="form__box form__box--abs">
+                        <label class="form__block form__block--abs">
+                          <input class="form__radio visuallyhidden" type="radio" name="options" value="метры">
+                          <div class="form__radio-fake form__radio-fake--abs">ар</div>
+                        </label>
+                        <label class="form__block form__block--abs">
+                          <input class="form__radio visuallyhidden" type="radio" name="options" value="сотки">
+                          <div class="form__radio-fake form__radio-fake--abs2">м</div>
                         </label>
                       </div>
                     </div>
@@ -333,10 +383,14 @@
               </div>
               <div class="projects__col-r">
                 <ul class="projects__list selected">
-                  <li class="projects__item">
+                  <li class="projects__item projects__item--hide">
                     <div class="gallery gallery--visible">
                       <div class="gallery__wrap">
-                        <div class="gallery__front" style="background-image: url(./assets/images/gallery/gallery-1.jpg);"></div>
+                        <div class="gallery__front" style="background-image: url(./assets/images/gallery/gallery-2.jpg);">
+                          <svg class="gallery__icon gallery__icon--front">
+                            <use xlink:href="assets/images/icons/sprite.svg#eye"></use>
+                          </svg>
+                        </div>
                         <div class="gallery__back">
                           <div class="gallery__desk">
                             <div class="gallery__pic">
@@ -360,7 +414,7 @@
                     </div>
                     <div class="gallery gallery--hide">
                       <div class="gallery__wrap">
-                        <div class="gallery__front" style="background-image: url(./assets/images/gallery/gallery-2.jpg);"></div>
+                        <div class="gallery__front" style="background-image: url(./assets/images/gallery/gallery-1.jpg);"></div>
                         <div class="gallery__back">
                           <div class="gallery__desk">
                             <div class="gallery__pic">
@@ -383,9 +437,9 @@
                       </div>
                     </div>
                   </li>
-                  <li class="projects__item">
+                  <li class="projects__item projects__item--hide">
                     <div class="gallery gallery--visible">
-                      <div class="gallery__wrap" style="background-image: url(./assets/images/gallery/gallery-2.jpg);">
+                      <div class="gallery__wrap" style="background-image: url(./assets/images/gallery/gallery-1.jpg);">
                         <div class="gallery__front"></div>
                         <div class="gallery__back">
                           <div class="gallery__desk">
@@ -433,7 +487,7 @@
                       </div>
                     </div>
                   </li>
-                  <li class="projects__item">
+                  <li class="projects__item projects__item--hide">
                     <div class="gallery gallery--visible">
                       <div class="gallery__wrap">
                         <div class="gallery__front" style="background-image: url(./assets/images/gallery/gallery-3.jpg);"></div>
@@ -483,12 +537,12 @@
                       </div>
                     </div>
                   </li>
-                  <li class="projects__item" style="background-image: url(./assets/images/gallery/gallery-6.jpg);"><a class="gallery gallery--instagram" href="#" target="blanc">
+                  <li class="projects__item projects__item--inst" style="background-image: url(./assets/images/gallery/gallery-6.jpg);"><a class="gallery gallery--instagram" href="#" target="blanc">
                       <svg class="gallery__icon gallery__icon--instagram">
                         <use xlink:href="assets/images/icons/sprite.svg#instagram"></use>
                       </svg>
                       <div class="gallery__text gallery__text--instagram">Еще больше<br>работ в instagram</div></a></li>
-                  <li class="projects__item">
+                  <li class="projects__item projects__item--hide">
                     <div class="gallery gallery--visible">
                       <div class="gallery__wrap" style="background-image: url(./assets/images/gallery/gallery-4.jpg);">
                         <div class="gallery__front"></div>
@@ -538,7 +592,7 @@
                       </div>
                     </div>
                   </li>
-                  <li class="projects__item">
+                  <li class="projects__item projects__item--hide">
                     <div class="gallery gallery--visible">
                       <div class="gallery__wrap">
                         <div class="gallery__front" style="background-image: url(./assets/images/gallery/gallery-5.jpg);"></div>
@@ -589,6 +643,41 @@
                     </div>
                   </li>
                 </ul>
+                <div class="projects__box projects__box--no-padings projects__box--mobile">
+                  <div class="carousel">
+                    <ul class="carousel__list">
+                      <!-- по дефолту li display:none; | при добавлении класса 'selected' - display:block; -->
+                      <li class="carousel__item selected">
+                        <div class="carousel__image" style="background-image: url(./assets/images/slide-one.jpg);"></div>
+                        <div class="carousel__image-wrap">
+                          <div class="carousel__heading">
+                            <div class="carousel__question">Хотите окраску<br>забора <span class="carousel__question-color">в подарок?</span></div>
+                            <div class="carousel__sticky">
+                              <div class="carousel__sticky-inner">акция</div>
+                            </div>
+                          </div>
+                          <div class="carousel__title">промокод <span class="carousel__title-color">"лето"</span></div><a class="carousel__link" href="#"> 
+                            <div class="carousel__btn-text">подробнее</div>
+                            <svg class="carousel__btn-icon">
+                              <use xlink:href="assets/images/icons/sprite.svg#right-arrow"></use>
+                            </svg></a>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="slider__buttons slider__buttons--rotate">
+                      <button class="controls slider__prev controls--second" type="button">
+                        <svg class="slider__icon slider__icon--second">
+                          <use xlink:href="assets/images/icons/sprite.svg#left"></use>
+                        </svg>
+                      </button>
+                      <button class="controls slider__next controls--second" type="button">
+                        <svg class="slider__icon slider__icon--second">
+                          <use xlink:href="assets/images/icons/sprite.svg#right"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -762,9 +851,50 @@
       <footer class="footer">
         <div class="container">
           <div class="footer__wrap">
+            <div class="footer__row footer__row--hide">
+              <div class="footer__menu">
+                <div class="footer__col">
+                  <div class="footer__subtitle">разделы</div>
+                  <ul class="footer__list">
+                    <li class="footer__item"><a class="footer__action" href="index.html">главная</a></li>
+                    <li class="footer__item"><a class="footer__action" href="works.html">галерея работ</a></li>
+                    <li class="footer__item"><a class="footer__action" href="#">стоимость</a></li>
+                    <li class="footer__item"><a class="footer__action" href="calculator.html">калькулятор</a></li>
+                    <li class="footer__item"><a class="footer__action" href="feedback.html">отзывы</a></li>
+                    <li class="footer__item"><a class="footer__action" href="contacts.html">контакты</a></li>
+                  </ul>
+                </div>
+                <div class="footer__col">
+                  <div class="footer__subtitle">услуги</div>
+                  <ul class="footer__list">
+                    <li class="footer__item"><a class="footer__action" href="#">Заборы из профнастила</a></li>
+                    <li class="footer__item"><a class="footer__action" href="#">Заборы из сетки рабицы</a></li>
+                    <li class="footer__item"><a class="footer__action" href="#">Заборы из дерева</a></li>
+                    <li class="footer__item"><a class="footer__action" href="#">Заборы из евроштакетника</a></li>
+                    <li class="footer__item"><a class="footer__action" href="#">Заборы из 3D сетки</a></li>
+                  </ul>
+                </div>
+                <div class="footer__col">
+                  <div class="footer__subtitle">услуги</div>
+                  <ul class="footer__list">
+                    <li class="footer__item"><a class="footer__action" href="#">Монолитные заборы    </a></li>
+                    <li class="footer__item"><a class="footer__action" href="#">Ворота и калитки</a></li>
+                    <li class="footer__item"><a class="footer__action" href="#">Откатные ворота</a></li>
+                    <li class="footer__item"><a class="footer__action" href="#">Теплицы из поликарбоната</a></li>
+                    <li class="footer__item"><a class="footer__action" href="#">Навесы и беседки из поликарбоната</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
             <div class="footer__row footer__row--main">
               <div class="footer__contacts">
-                <div class="footer__logo"><a class="footer__link" href="index.html"><img class="footer__pic" src="./assets/images/icons/Logo.png" alt="logo"></a></div>
+                <div class="footer__logo"><a class="footer__link" href="index.html">
+                    <!--img.footer__pic(src="./assets/images/icons/logo-retina.png" alt="logo")-->
+                    <div class="footer__pic"></div>
+                    <div class="footer__pic-text">
+                      <div class="footer__pic-text1">склад</div>
+                      <div class="footer__pic-text2">заборов</div>
+                    </div></a></div>
                 <div class="footer__phone"> <a class="footer__call" href="tel:">8 (926) 289-42-23</a></div>
                 <div class="footer__adress">
                   <div class="footer__desk">Россия, Москва<br>ул. Перерва д. 45 офис 8 </div>
@@ -774,7 +904,7 @@
                   </div>
                 </div>
               </div>
-              <div class="footer__menu">
+              <div class="footer__menu footer__menu--hide">
                 <div class="footer__col">
                   <div class="footer__subtitle">разделы</div>
                   <ul class="footer__list">

@@ -17,7 +17,13 @@
       <header class="header">
         <div class="container">
           <div class="header__wrap">
-            <div class="header__logo"><a class="header__link" href="index.html"><img class="header__pic" src="./assets/images/icons/Logo.png" alt="logo"></a></div>
+            <div class="header__logo"><a class="header__link" href="index.html">
+                <!--img.header__pic(src="./assets/images/icons/logo-st.png" alt="logo")-->
+                <div class="header__pic"></div>
+                <div class="header__pic-text">
+                  <div class="header__pic-text1">склад</div>
+                  <div class="header__pic-text2">заборов</div>
+                </div></a></div>
             <div class="header__menu">
               <ul class="menu">
                 <li class="menu__item"><a class="menu__link" href="index.html">главная </a></li>
@@ -49,6 +55,32 @@
                   <div class="header__number">8 (926) 289-42-23</div>
                   <div class="header__text">перезвонить мне</div>
                 </div></a></div>
+            <button class="hamburger" type="button" id="openFull">
+              <div class="hamburger__menu"></div>
+            </button>
+          </div>
+        </div>
+        <div class="header__mob-menu">
+          <div class="container">
+            <ul class="menu">
+              <li class="menu__item"><a class="menu__link" href="index.html">главная </a></li>
+              <li class="menu__item" id="openDrop"><a class="menu__link" href="calculator.html">услуги</a>
+                <ul class="dropdown">
+                  <li class="dropdown__item"><a class="dropdown__link" href="calculator.html">Заборы из профнастила</a></li>
+                  <li class="dropdown__item"><a class="dropdown__link" href="#">Заборы из сетки рабицы</a></li>
+                  <li class="dropdown__item"><a class="dropdown__link" href="#">Заборы из дерева</a></li>
+                  <li class="dropdown__item"><a class="dropdown__link" href="#">Заборы из евроштакетника</a></li>
+                  <li class="dropdown__item"><a class="dropdown__link" href="#">Заборы из евроштакетника</a></li>
+                  <li class="dropdown__item"><a class="dropdown__link" href="#">Монолитные заборы</a></li>
+                  <li class="dropdown__item"><a class="dropdown__link" href="#">Ворота и калитки</a></li>
+                  <li class="dropdown__item"><a class="dropdown__link" href="#">Откатные ворота</a></li>
+                  <li class="dropdown__item"><a class="dropdown__link" href="#">Теплицы из поликарбоната</a></li>
+                  <li class="dropdown__item"><a class="dropdown__link" href="#">Навесы и беседки из поликарбоната</a></li>
+                </ul>
+              </li>
+              <li class="menu__item"><a class="menu__link" href="works.html">наши работы </a></li>
+              <li class="menu__item"><a class="menu__link" href="contacts.html">контакты</a></li>
+            </ul>
           </div>
         </div>
       </header>
@@ -174,9 +206,50 @@
       <footer class="footer">
         <div class="container">
           <div class="footer__wrap">
+            <div class="footer__row footer__row--hide">
+              <div class="footer__menu">
+                <div class="footer__col">
+                  <div class="footer__subtitle">разделы</div>
+                  <ul class="footer__list">
+                    <li class="footer__item"><a class="footer__action" href="index.html">главная</a></li>
+                    <li class="footer__item"><a class="footer__action" href="works.html">галерея работ</a></li>
+                    <li class="footer__item"><a class="footer__action" href="#">стоимость</a></li>
+                    <li class="footer__item"><a class="footer__action" href="calculator.html">калькулятор</a></li>
+                    <li class="footer__item"><a class="footer__action" href="feedback.html">отзывы</a></li>
+                    <li class="footer__item"><a class="footer__action" href="contacts.html">контакты</a></li>
+                  </ul>
+                </div>
+                <div class="footer__col">
+                  <div class="footer__subtitle">услуги</div>
+                  <ul class="footer__list">
+                    <li class="footer__item"><a class="footer__action" href="#">Заборы из профнастила</a></li>
+                    <li class="footer__item"><a class="footer__action" href="#">Заборы из сетки рабицы</a></li>
+                    <li class="footer__item"><a class="footer__action" href="#">Заборы из дерева</a></li>
+                    <li class="footer__item"><a class="footer__action" href="#">Заборы из евроштакетника</a></li>
+                    <li class="footer__item"><a class="footer__action" href="#">Заборы из 3D сетки</a></li>
+                  </ul>
+                </div>
+                <div class="footer__col">
+                  <div class="footer__subtitle">услуги</div>
+                  <ul class="footer__list">
+                    <li class="footer__item"><a class="footer__action" href="#">Монолитные заборы    </a></li>
+                    <li class="footer__item"><a class="footer__action" href="#">Ворота и калитки</a></li>
+                    <li class="footer__item"><a class="footer__action" href="#">Откатные ворота</a></li>
+                    <li class="footer__item"><a class="footer__action" href="#">Теплицы из поликарбоната</a></li>
+                    <li class="footer__item"><a class="footer__action" href="#">Навесы и беседки из поликарбоната</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
             <div class="footer__row footer__row--main">
               <div class="footer__contacts">
-                <div class="footer__logo"><a class="footer__link" href="index.html"><img class="footer__pic" src="./assets/images/icons/Logo.png" alt="logo"></a></div>
+                <div class="footer__logo"><a class="footer__link" href="index.html">
+                    <!--img.footer__pic(src="./assets/images/icons/logo-retina.png" alt="logo")-->
+                    <div class="footer__pic"></div>
+                    <div class="footer__pic-text">
+                      <div class="footer__pic-text1">склад</div>
+                      <div class="footer__pic-text2">заборов</div>
+                    </div></a></div>
                 <div class="footer__phone"> <a class="footer__call" href="tel:">8 (926) 289-42-23</a></div>
                 <div class="footer__adress">
                   <div class="footer__desk">Россия, Москва<br>ул. Перерва д. 45 офис 8 </div>
@@ -186,7 +259,7 @@
                   </div>
                 </div>
               </div>
-              <div class="footer__menu">
+              <div class="footer__menu footer__menu--hide">
                 <div class="footer__col">
                   <div class="footer__subtitle">разделы</div>
                   <ul class="footer__list">
