@@ -91,7 +91,7 @@
         </div>
         <div class="hero">
           <div class="container">
-            <div class="hero__wrap hero__wrap--fullwidth">
+            <div class="hero__wrap hero__wrap--fullwidth hero__wrap--with-desc">
               <h1 class="section__title">Обратная связь</h1>
               <div class="hero__desk">
                 <p>Мы с удовольствием ответим на любые вопросы<br>связанным с заказом, оформлением, доставкой и монтажом</p>
@@ -99,11 +99,11 @@
             </div>
           </div>
         </div>
-        <div class="contacts">
+        <div class="contacts" id="append">
           <div class="container">
             <div class="contacts__wrap">
-              <div class="contacts__col-l">
-                <div class="contacts__row">
+              <div class="contacts__col-l" id="one">
+                <div class="contacts__row contacts__row--first">
                   <div class="details">
                     <div class="block-title">
                       <div class="block-title__number">01.</div>
@@ -158,7 +158,7 @@
                 </div>
               </div>
               <div class="contacts__col-r">
-                <form class="form form--green">
+                <form class="form form--green form--cont" id="two">
                   <div class="form__wrap">
                     <div class="block-title">
                       <div class="block-title__number block-title__number--light">02.</div>
@@ -168,7 +168,7 @@
                       <p>По любым вопросам, связанным с заказом, оформлением,<br>доставкой и монтажом вы можете использовать форму обратной связи.</p>
                     </div>
                     <div class="form__column">
-                      <div class="form__row form__row--with-margin">
+                      <div class="form__row form__row--with-margin form__row--resp">
                         <label class="form__block">
                           <input class="form__input" type="text" name="user-name" placeholder="Имя" required>
                         </label>
