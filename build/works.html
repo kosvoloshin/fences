@@ -44,16 +44,16 @@
                 <li class="menu__item"><a class="menu__link" href="contacts.html">контакты</a></li>
               </ul>
             </div>
-            <div class="header__contacts"><a class="header__call" href="tel:">
+            <div class="header__contacts">
+              <div class="header__call">
                 <div class="header__icon">
                   <svg class="header__icon-phone">
                     <use xlink:href="assets/images/icons/sprite.svg#phone"></use>
                   </svg>
                 </div>
-                <div class="header__phone">
-                  <div class="header__number">8 (926) 289-42-23</div>
-                  <div class="header__text">перезвонить мне</div>
-                </div></a></div>
+                <div class="header__phone"><a class="header__number" href="tel:89262894223">8 (926) 289-42-23</a><a class="header__text" href="#">перезвонить мне</a></div>
+              </div>
+            </div>
             <button class="hamburger" type="button" id="openFull">
               <div class="hamburger__menu"></div>
             </button>
@@ -135,6 +135,7 @@
           </div>
           <div class="works">
             <div class="works__list">
+              <!-- при добавлении класса 'works__item--hide' ряд скрывается-->
               <div class="works__item"><a class="photo__anchor" href="#"></a>
                 <div class="photo">
                   <div class="photo__columns">
