@@ -1,0 +1,270 @@
+extends ../template
+
+block variables
+    - var title = 'География работ'
+
+block content
+    .wrapper
+        include ../common/header.pug
+        section.section
+            .section__under.section__under--city
+                .section__under-img(style="background-image: url(./assets/images/bg-city.jpg)")
+                    .section__image-wrap.section__image-wrap--darken
+            .hero
+                .container
+                    .hero__wrap.hero__wrap--fullwidth.hero__wrap--with-desc
+                        h1.section__title.section__title--bold Установка заборов 
+                            br 
+                            | из профнастила в Апрелевке
+                        .hero__desk
+                            p В компании «Склад Заборов» вы сможете заказать качественные 
+                                br
+                                | монтажные работы в Апрелевке.
+            .city
+                .container
+                    .city__wrap
+                        .city__row.city__row-1
+                            .city__col.grey
+                                .block-title
+                                    .block-title__number 01.
+                                    h2.block-title__text как заказать
+                                        br 
+                                        | забор из профнастила
+                                ul.city__info
+                                    li.city__item
+                                        span 1.
+                                        | Звонок в “Склад Заборов” и просчет стоимости будущего забора;
+                                    li.city__item
+                                        span 2.
+                                        | Встреча с нами либо в нашем офисе, либо при помощи вызова “мобильного менеджера” во время которой мы производим подписание договора и Вы вносите предоплату;
+                                    li.city__item
+                                        span 3.
+                                        | Монтаж конструкции забора и полная оплата по договору.
+                            .city__col.blue
+                                .block-title
+                                    .block-title__number.block-title__number--light 02.
+                                    h2.block-title__text.block-title__text--light стоимость доставки
+                                        br 
+                                        | в апрелевку
+                                .city__det
+                                    .city__det-line Расстояние от МКАД:
+                                        span 7км
+                                    .city__det-line Стоимость доставки:
+                                        span 1250 руб
+                                    .city__text
+                                        p Помимо города Апрелевка наш замерщик также выезжает в другие города, села и округа Московской области.
+                                    a.contacts__link(href="#")
+                                        .contacts__btn-text посмотреть географию работ
+                                        svg.contacts__btn-icon: use(xlink:href="assets/images/icons/sprite.svg#right-arrow")
+                        .city__row.city__row-2
+                            .city__col.grey
+                                .block-title
+                                    .block-title__number 03.
+                                    h2.block-title__text стоимость заборов
+                                        br 
+                                        | из профнастила в апрелевке
+                                .city__table.table
+                                    .table__row
+                                        .table__col.table__col-2
+                                        .table__col.table__col-4.bold 2 лаги
+                                        .table__col.table__col-2.bold 3 лаги
+                                    .table__row.table__row--line
+                                        .table__col.table__col-2
+                                        .table__col.table__col-1.bold 150 см.
+                                        .table__col.table__col-1.bold 170 см.
+                                        .table__col.table__col-1.bold 170 см.
+                                        .table__col.table__col-1.bold 170 см.
+                                        .table__col.table__col-1.bold 170 см.
+                                        .table__col.table__col-1.bold 170 см.
+                                    .table__row
+                                        .table__col.table__col-2.bold Оцинкованный
+                                        .table__col.table__col-1 904 руб.
+                                        .table__col.table__col-1 904 руб.
+                                        .table__col.table__col-1 904 руб.
+                                        .table__col.table__col-1 904 руб.
+                                        .table__col.table__col-1 904 руб.
+                                        .table__col.table__col-1 904 руб.
+                                    .table__row
+                                        .table__col.table__col-2.bold Цветной С-8
+                                        .table__col.table__col-1 906 руб.
+                                        .table__col.table__col-1 906 руб.
+                                        .table__col.table__col-1 906 руб.
+                                        .table__col.table__col-1 906 руб.
+                                        .table__col.table__col-1 906 руб.
+                                        .table__col.table__col-1 906 руб.
+                                    .table__row
+                                        .table__col.table__col-2.bold Двухсторонний цветной С-8
+                                        .table__col.table__col-1 908 руб.
+                                        .table__col.table__col-1 908 руб.
+                                        .table__col.table__col-1 908 руб.
+                                        .table__col.table__col-1 908 руб.
+                                        .table__col.table__col-1 908 руб.
+                                        .table__col.table__col-1 908 руб.
+                                .city__table-after *В таблице указана стоимость забора из профнастила за 1 метр с работой.
+                                .city__line
+                                    .city__desc Узнать точную стоимость забора из профлиста «под ключ», с доставкой до Апрелевки, можно с помощью калькулятора на сайте.
+                                    a.feedback__link(href="#")
+                                        .feedback__btn-text расчитать стоимость
+                                        svg.feedback__btn-icon: use(xlink:href="assets/images/icons/sprite.svg#right-arrow")
+                        .city__row.city__row-3
+                            .city__col.tiny
+                                .city__stock
+                                    .carousel
+                                        ul.carousel__list
+                                            // по дефолту li display:none; | при добавлении класса 'selected' - display:block; 
+                                            li.carousel__item.selected
+                                                .carousel__image(style="background-image: url(./assets/images/stock-1.jpg)")
+                                                .carousel__image-wrap
+                                                    .carousel__heading
+                                                        .carousel__question При заказе забора из профнастила с 
+                                                            br
+                                                            | полимерным покрытием 
+                                                        .carousel__sticky
+                                                            .carousel__sticky-inner акция
+                                                    .carousel__title 
+                                                        span.carousel__title-color +3% скидка
+                                                    //a.carousel__link(href="#") 
+                                                        .carousel__btn-text подробнее
+                                                        svg.carousel__btn-icon: use(xlink:href="assets/images/icons/sprite.svg#right-arrow")
+                                        //.slider__buttons.slider__buttons--rotate
+                                            button(type="button").controls.slider__prev
+                                                svg.slider__icon: use(xlink:href="assets/images/icons/sprite.svg#left")
+                                            button(type="button").controls.slider__next
+                                                svg.slider__icon: use(xlink:href="assets/images/icons/sprite.svg#right")
+                                .city__stock
+                                    .carousel
+                                        ul.carousel__list
+                                            // по дефолту li display:none; | при добавлении класса 'selected' - display:block; 
+                                            li.carousel__item.selected
+                                                .carousel__image(style="background-image: url(./assets/images/stock-2.jpg)")
+                                                .carousel__image-wrap
+                                                    .carousel__heading
+                                                        .carousel__question Выезд менеджера
+                                                        .carousel__sticky
+                                                            .carousel__sticky-inner акция
+                                                    .carousel__title
+                                                        span.carousel__title-color бесплатно
+                                                    a.carousel__link(href="#") 
+                                                        .carousel__btn-text посмотреть все акции
+                                                        svg.carousel__btn-icon: use(xlink:href="assets/images/icons/sprite.svg#right-arrow")
+                                        //.slider__buttons.slider__buttons--rotate
+                                            button(type="button").controls.slider__prev
+                                                svg.slider__icon: use(xlink:href="assets/images/icons/sprite.svg#left")
+                                            button(type="button").controls.slider__next
+                                                svg.slider__icon: use(xlink:href="assets/images/icons/sprite.svg#right")
+                            .city__col
+                                form.form.form--green
+                                    .form__wrap
+                                        .block-title
+                                            .block-title__number.block-title__number--light 04.
+                                            h2.block-title__text.block-title__text--light вызвать замерщика
+                                                br 
+                                                | в апрелевку
+                                        .form__column
+                                            .form__row.form__row--with-margin.form__row--resp
+                                                label.form__block
+                                                    input(type="text" name="user-name" placeholder="Имя" required).form__input
+                                                label.form__block
+                                                    input(type="text" name="user-tel" placeholder="Телефон" required).form__input
+                                            .form__row.form__row--with-margin
+                                                label.form__block
+                                                    input(type="text" name="subject" placeholder="Адрес" required).form__input
+                                            .form__row.form__row--with-margin
+                                                label.form__block
+                                                    textarea(name="message" cols="30" rows="5" placeholder="Сообщение" required).form__textarea
+                                        button(type="submit").form__button.form__button--second
+                                            .form__btn-text отправить
+                                            svg.form__btn-icon: use(xlink:href="assets/images/icons/sprite.svg#right-arrow")
+                        .city__row.city__row-4
+                            .works__item
+                                a.photo__anchor(href="#")
+                                .photo
+                                    .photo__columns
+                                        .photo__col-l
+                                            .photo__image(style="background-image: url(./assets/images/gallery/fence-1.jpg)")
+                                                .photo__image-wrap
+                                                    .photo__content
+                                                        h2.photo__title галерея заборов 
+                                                            br 
+                                                            | из профнастила
+                                                        .photo__obj Страница 1 из 3
+                                                        .slider__buttons.slider__buttons--second.slider__buttons--photo
+                                                            button(type="button").controls.slider__prev.controls--second
+                                                                svg.slider__icon.slider__icon--second: use(xlink:href="assets/images/icons/sprite.svg#left")
+                                                            button(type="button").controls.slider__next.controls--second
+                                                                svg.slider__icon.slider__icon--second: use(xlink:href="assets/images/icons/sprite.svg#right")
+                                        .photo__col-r
+                                            ul.photo__list.selected
+                                                li.photo__item
+                                                    ul.photo__sub-list
+                                                        li.photo__sub-item.visible
+                                                            a.photo__link(href="#")
+                                                                .photo__pic.photo__pic--more
+                                                                    img.photo__img(src="./assets/images/gallery/fence-2.jpg" alt="gallery")
+                                                                svg.photo__icon: use(xlink:href="assets/images/icons/sprite.svg#eye")
+                                                        li.photo__sub-item
+                                                            a.photo__link(href="#")
+                                                                .photo__pic.photo__pic--more
+                                                                    img.photo__img(src="./assets/images/gallery/fence-3.jpg" alt="gallery")
+                                                                svg.photo__icon: use(xlink:href="assets/images/icons/sprite.svg#eye")
+                                                        li.photo__sub-item
+                                                            a.photo__link(href="#")
+                                                                .photo__pic.photo__pic--more
+                                                                    img.photo__img(src="./assets/images/gallery/fence-4.jpg" alt="gallery")
+                                                                svg.photo__icon: use(xlink:href="assets/images/icons/sprite.svg#eye")
+                                                li.photo__item
+                                                    ul.photo__sub-list
+                                                        li.photo__sub-item.visible
+                                                            a.photo__link(href="#")
+                                                                .photo__pic.photo__pic--more
+                                                                    img.photo__img(src="./assets/images/gallery/fence-3.jpg" alt="gallery")
+                                                                svg.photo__icon: use(xlink:href="assets/images/icons/sprite.svg#eye")
+                                                        li.photo__sub-item
+                                                            a.photo__link(href="#")
+                                                                .photo__pic.photo__pic--more
+                                                                    img.photo__img(src="./assets/images/gallery/fence-2.jpg" alt="gallery")
+                                                                svg.photo__icon: use(xlink:href="assets/images/icons/sprite.svg#eye")
+                                                        li.photo__sub-item
+                                                            a.photo__link(href="#")
+                                                                .photo__pic.photo__pic--more
+                                                                    img.photo__img(src="./assets/images/gallery/fence-4.jpg" alt="gallery")
+                                                                svg.photo__icon: use(xlink:href="assets/images/icons/sprite.svg#eye")
+                                                li.photo__item
+                                                    ul.photo__sub-list
+                                                        li.photo__sub-item.visible
+                                                            a.photo__link(href="#")
+                                                                .photo__pic
+                                                                    img.photo__img(src="./assets/images/gallery/fence-4.jpg" alt="gallery")
+                                                                svg.photo__icon: use(xlink:href="assets/images/icons/sprite.svg#eye")
+                                                li.photo__item
+                                                    ul.photo__sub-list
+                                                        li.photo__sub-item.visible
+                                                            a.photo__link(href="#")
+                                                                .photo__pic
+                                                                    img.photo__img(src="./assets/images/gallery/fence-5.jpg" alt="gallery")
+                                                                svg.photo__icon: use(xlink:href="assets/images/icons/sprite.svg#eye")
+                                                li.photo__item
+                                                    ul.photo__sub-list
+                                                        li.photo__sub-item.visible
+                                                            a.photo__link(href="#")
+                                                                .photo__pic.photo__pic--more
+                                                                    img.photo__img(src="./assets/images/gallery/fence-5.jpg" alt="gallery")
+                                                                svg.photo__icon: use(xlink:href="assets/images/icons/sprite.svg#eye")
+                                                        li.photo__sub-item
+                                                            a.photo__link(href="#")
+                                                                .photo__pic.photo__pic--more
+                                                                    img.photo__img(src="./assets/images/gallery/fence-3.jpg" alt="gallery")
+                                                                svg.photo__icon: use(xlink:href="assets/images/icons/sprite.svg#eye")
+                                                        li.photo__sub-item
+                                                            a.photo__link(href="#")
+                                                                .photo__pic.photo__pic--more
+                                                                    img.photo__img(src="./assets/images/gallery/fence-4.jpg" alt="gallery")
+                                                                svg.photo__icon: use(xlink:href="assets/images/icons/sprite.svg#eye")
+                                                li.photo__item
+                                                    ul.photo__sub-list
+                                                        li.photo__sub-item.visible
+                                                            a.photo__link(href="#")
+                                                                .photo__pic
+                                                                    img.photo__img(src="./assets/images/gallery/fence-6.jpg" alt="gallery")
+                                                                svg.photo__icon: use(xlink:href="assets/images/icons/sprite.svg#eye")
+        include ../common/footer.pug 

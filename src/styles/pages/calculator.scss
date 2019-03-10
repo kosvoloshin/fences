@@ -88,7 +88,7 @@
         }
     }
 
-    &:hover:not(.selected) {
+    /*&:hover:not(.selected) {
         background-color: $blue;
 
         .tabs__obj {
@@ -98,7 +98,7 @@
         .tabs__icon {
             fill: $w;
         }
-    }
+    }*/
 
     @include desktop {
         border-right: 1px solid #9dacb4;
@@ -1523,6 +1523,10 @@
     justify-content: space-between;
     max-width: rem(793px);
     padding-top: rem(7px);
+    border-top: 1px solid #b9cad3;
+    border-bottom: 1px solid #b9cad3;
+    margin-top: 1.92857rem;
+    padding: 1.67143rem 0 1.07143rem;
 
     @include tablets {
         flex-flow: row wrap;
@@ -1744,13 +1748,9 @@
 }
 
 .form-total {
-    border-top: 1px solid #b9cad3;
-    border-bottom: 1px solid #b9cad3;
     max-width: rem(793px);
     display: flex;
     flex-direction: row;
-    margin-top: rem(27px);
-    padding: rem(15px) 0;
 }
 
 .form-total__col-l {
@@ -1857,14 +1857,29 @@
 }
 
 .form-calc-gap input[name="fence-gap"]:not(:checked) ~ #text-gap {
+//.form-calc-gap input[name="gap-of-gates"]:not(:checked) ~ #text-gap {
     color: black;
     background: white;
 }
 
+//.form-calc-gap input[name="fence-gap"]:not(:checked) ~ #text-gap {
+.form-calc-gap input[name="gap-of-gates"]:not(:checked) ~ #text-gap {
+        color: black;
+        background: white;
+}
+
 .form-calc-gap input[name="fence-gap"]:checked ~ #text-gap {
+//.form-calc-gap input[name="gap-of-gates"]:checked ~ #text-gap {
     background: transparent;
     color: transparent;
     z-index: 2;
+}
+
+//.form-calc-gap input[name="fence-gap"]:checked ~ #text-gap {
+.form-calc-gap input[name="gap-of-gates"]:checked ~ #text-gap {
+        background: transparent;
+        color: transparent;
+        z-index: 2;
 }
 
 #select-gap:disabled ~ .items-calc-gap #text-gap {
@@ -1970,12 +1985,12 @@
     cursor: pointer;
 }
 
-.form-calc-coating input[name="fence-coating"]:not(:checked) ~ #text-coating {
+.form-calc-coating input[name="coating-of-gates"]:not(:checked) ~ #text-coating {
     color: black;
     background: white;
 }
 
-.form-calc-coating input[name="fence-coating"]:checked ~ #text-coating {
+.form-calc-coating input[name="coating-of-gates"]:checked ~ #text-coating {
     background: transparent;
     color: transparent;
     z-index: 2;

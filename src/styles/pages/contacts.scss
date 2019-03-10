@@ -383,6 +383,13 @@
     flex: 0;
 }
 
+.form__block_gdpr {
+    width:100%;
+    display: flex;
+    flex: -1;
+    margin-right: 1.42857rem; 
+}
+
 .form__textarea {
     background-color: $w;
     color: $b;

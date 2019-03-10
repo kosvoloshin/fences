@@ -1426,10 +1426,23 @@ div.wpcf7 img.ajax-loader {
 .form__button--calc {
     padding: rem(10px) rem(15px);
     bottom: rem(61px);
+    background-color: #49b7ef;
+    color:#fff !important;
+    border-color:#fff !important;
 
     @include laptop {
         bottom: rem(41px);
     }
+}
+
+.form__button--calc.form__button--dark  .form__btn-text,  
+.form__button--calc.form__button--dark  .form__btn-icon {
+    color:#fff !important;
+    border-color:#fff !important;
+}
+
+.form__button--calc.form__button--dark  .form__btn-icon.form__btn-icon--dark {
+    fill:#fff;
 }
 
 .form__button--dark {

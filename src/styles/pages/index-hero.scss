@@ -381,6 +381,7 @@
         transform: translate(-50%, 0);
         top: calc(100% + 17px);
         width: rem(250px);
+        display: none;
 
         &:after {
             left: initial;
