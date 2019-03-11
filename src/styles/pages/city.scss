@@ -7,6 +7,12 @@
     }
 }
 
+.section__under--city ~ .hero .hero__desk {
+    @include phones {
+        display: none;
+    }
+}
+
 .city__row {
     display: flex;
     flex-direction: row;
@@ -16,10 +22,15 @@
     &:last-child {
         margin-bottom: 0;
     }
+
+    @include tablets {
+        flex-direction: column;
+    }
 }
 
 .city__row .city__col {
     flex: 1;
+    padding: rem(22px) rem(52px);
 
     &.grey {
         background-color: #e3ebed;
@@ -27,6 +38,18 @@
 
     &.blue {
         background-color: #49b7ef;
+    }
+
+    @include desktop {
+        padding: rem(22px) rem(42px);
+    }
+
+    @include laptop {
+        padding: 22px 30px;
+    }
+
+    @include phones {
+        padding: 22px;
     }
 }
 
@@ -37,10 +60,15 @@
     &:last-child {
         margin-right: 0;
     }
-}
 
-.city__row .city__col {
-    padding: rem(22px) rem(52px);
+    @include tablets {
+        margin-right: 0;
+        margin-bottom: 20px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 }
 
 .city__row-3 .city__col {
@@ -48,13 +76,22 @@
 }
 
 .city__row-3 .city__col.tiny {
-    width: calc(100% * 0.4140625);
+    width: 41.40625%;
     flex: 0 auto;
+
+    @include tablets {
+        width: 100%;
+    }
 }
 
 .city__info {
     padding-right: rem(40px);
     padding-top: rem(30px);
+
+    @include desktop {
+        padding-top: 25px;
+        padding-right: 0;
+    }
 }
 
 .city__item {
@@ -68,6 +105,10 @@
     &:last-child {
         margin-bottom: 17px;
     }
+
+    @include laptop {
+        padding-left: 15px;
+    }
 }
 
 .city__item span {
@@ -80,6 +121,10 @@
 
 .city__det {
     padding-top: 32px;
+
+    @include desktop {
+        padding-top: 27px;
+    }
 }
 
 .city__det-line {
@@ -97,6 +142,11 @@
     font-size: 20px;
     font-weight: 900;
     margin-left: 20px;
+
+    @include phones {
+        font-size: 18px;
+        margin-left: 10px;
+    }
 }
 
 .city__text {
@@ -156,6 +206,21 @@
     line-height: normal;
     margin-top: 34px;
     margin-bottom: 33px;
+
+    @include desktop {
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    @include laptop {
+        font-size: 12px;
+    }
+}
+
+.table.hide--pl {
+    @include phones-large {
+        display: none;
+    }
 }
 
 .table__col-1 {
@@ -188,9 +253,17 @@
     border-top: 1px solid #e3ebed;
     text-align: center;
     padding: 16px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &:first-child {
+        justify-content: flex-start;
         text-align: left;
+    }
+
+    @include laptop {
+        padding: 14px 16px;
     }
 }
 
@@ -213,16 +286,49 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start;
     margin-top: 35px;
+
+    @include desktop {
+        margin-top: 25px;
+    }
+
+    @include tablets {
+        flex-direction: column;
+    }
 }
 
 .city__desc {
     width: 55%;
+
+    @include tablets {
+        width: 100%;
+        margin-bottom: 15px;
+    }
 }
 
 .city__stock {
     width: 100%;
     height: 248px;
+
+    @include tablets {
+        height: 220px;
+    }
+
+    @include phones {
+        height: 248px;
+    }
+}
+
+.city__stock .carousel__image-wrap {
+
+    @include laptop {
+        padding: 30px 20px 20px 20px;
+    }
+
+    @include tablets {
+        padding: 30px;
+    }
 }
 
 .city__stock + .city__stock {
@@ -232,4 +338,109 @@
 .city__col .form__column,
 .city__col .form__button {
     margin-top: 15px;
+}
+
+.city__col .form__button {
+
+    @include tablets {
+        position: relative;
+        margin-top: 30px;
+        margin-bottom: 15px;
+        bottom: 0;
+    }
+}
+
+.city__col .form {
+    @include phones {
+        padding-bottom: 30px;
+    }
+}
+
+.price {
+    display: none;
+    width: 100%;
+    background-color: #fff;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.price.show--pl {
+    @include phones-large {
+        display: block;
+    }
+}
+
+.price__content {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.4s;
+}
+
+.price__trigger {
+    padding: 16px 55px 16px 20px;
+    border-bottom: 1px solid #e3ebed;
+    font-size: 14px;
+    font-weight: 600;
+    color: #3b444e;
+    position: relative;
+
+    &:after {
+        content: '';
+        height: 38px;
+        width: 38px;
+        background-color: #e5ecef;
+        position: absolute;
+        right: 8px;
+        top: 50%;
+        transform: translate(0,-50%);
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 21px;
+        transform: translate(0, -50%);
+        height: 0;
+        width: 0;
+        border: 6px solid transparent;
+        border-top-color: #7d888e;
+        border-bottom-width: 0;
+        transition: .4s;
+        z-index: 2;
+    }
+}
+
+.price__item.active .price__trigger:before {
+    transform: translate(0, -50%) rotate(180deg);
+}
+
+.price__caption {
+    padding: 16px 20px;
+    border-bottom: 1px solid #e3ebed;
+    background-color: #f0f3f3;
+    font-size: 14px;
+    font-weight: 600;
+    color: #3b444e;
+}
+
+.price__subitem {
+    padding: 16px 20px;
+    border-bottom: 1px solid #e3ebed;
+    font-size: 14px;
+    font-weight: 600;
+    color: #3b444e;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.price__item .price__content {
+    border-width: 0px;
+    transition: .4s;
+}
+
+.price__item.active .price__content {
+    border-top: 2px solid #40c36b;
+    border-bottom: 2px solid #40c36b;
 }

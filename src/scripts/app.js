@@ -17,3 +17,5 @@ require('./common/contacts-resp.js');
 require('./common/nav-button.js');
 
 require('./common/regions-acco.js');
+
+require('./common/table-price.js');
