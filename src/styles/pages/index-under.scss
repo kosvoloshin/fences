@@ -18,7 +18,8 @@
 }
 
 .section__under--contacts,
-.section__under--city {
+.section__under--city,
+.section__under--discount {
     height: rem(491px);
 
     @include phones {

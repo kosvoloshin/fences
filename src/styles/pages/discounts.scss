@@ -1,0 +1,103 @@
+.discount__wrap {
+    padding-top: rem(79px);
+    padding-bottom: rem(20px);
+
+    @include phones {
+        padding-top: rem(20px);
+    }
+}
+
+.discout__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -20px;
+    margin-bottom: -20px;
+}
+
+.discount__item {
+    display: inline-block;
+    width: calc(50% - 20px);
+    height: 232px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background-color: #e3ebed;
+    position: relative;
+    padding-left: 170px;
+
+    @include laptop {
+        width: 100%;
+        padding-left: 200px;
+    }
+
+    @include phones-large {
+        padding-left: 170px;
+    }
+
+    @include phones {
+        padding-left: 0;
+        padding-top: 140px;
+        height: auto;
+    }
+}
+
+.discount__image {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 170px;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @include laptop {
+        width: 200px;
+    }
+
+    @include phones-large {
+        width: 170px;
+    }
+
+    @include phones {
+        width: 100%;
+        height: 140px;
+    }
+}
+
+.discount__content {
+    padding: 45px 50px 20px;
+
+    @include desktop {
+        padding: 25px 30px 20px;
+    }
+}
+
+.discount__text {
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.discount__label {
+    font-size: 22px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #40c36b;
+}
+
+.discount__bottom {
+    font-size: 13px;
+    line-height: 20px;
+    color: #7d888e;
+}
+
+.discount__text + .discount__label {
+    margin-top: 47px;
+
+    @include desktop {
+        margin-top: 37px;  
+    }
+}
+.discount__label + .discount__bottom {
+    margin-top: 25px;
+}

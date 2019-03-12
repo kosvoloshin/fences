@@ -1,0 +1,43 @@
+extends ../template
+
+block variables
+    - var title = 'Акции'
+
+block content
+    .wrapper
+        include ../common/header.pug
+        section.section
+            .section__under.section__under--discount
+                .section__under-img(style="background-image: url(./assets/images/bg-city.jpg)")
+                    .section__image-wrap.section__image-wrap--darken
+            .hero
+                .container
+                    .hero__wrap.hero__wrap--fullwidth.hero__wrap--with-desc
+                        h1.section__title.section__title--bold Акции
+                        .hero__desk
+                            p Здесь вы можете узнать информацию 
+                                br
+                                | о действующих акциях
+            .discount
+                .container
+                    .discount__wrap
+                        ul.discout__list
+                            li.discount__item
+                                .discount__image(style="background-image: url(./assets/images/stock-1.jpg)")
+                                .discount__content
+                                    .discount__text При заказе забора из профнастила с полимерным покрытием
+                                    .discount__label +3% скидки!
+                                    .discount__bottom Акция действует до 20.03.2019
+                            li.discount__item
+                                .discount__image(style="background-image: url(./assets/images/stock-2.jpg)")
+                                .discount__content
+                                    .discount__text При заказе забора из профнастила с полимерным покрытием
+                                    .discount__label в подарок!
+                            li.discount__item
+                                .discount__image(style="background-image: url(./assets/images/stock-2.jpg)")
+                                .discount__content
+                                    .discount__text При заказе забора из профнастила с полимерным покрытием
+                                    .discount__label +3% скидки!
+                                    .discount__bottom Акция действует до 20.03.2019
+            include ../common/pagination.pug  
+        include ../common/footer.pug 

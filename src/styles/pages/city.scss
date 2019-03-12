@@ -444,3 +444,27 @@
     border-top: 2px solid #40c36b;
     border-bottom: 2px solid #40c36b;
 }
+
+.city__btn {
+    position: absolute;
+    background: none;
+    border: initial;
+    padding: 0;
+    outline: none;
+    right: rem(20px);
+    top: rem(20px);
+    cursor: pointer;
+
+    &:hover {
+        .type__icon {
+            opacity: .6;
+        }
+    }
+}
+
+.city__icon {
+    height: rem(28px);
+    width: rem(28px);
+    fill: #a1b0b8;
+    transition: .3s;
+}
